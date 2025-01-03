@@ -1,82 +1,83 @@
-from flask import jsonify
-from utils.error_codes import ErrorCode
+from typing import Any, Optional
+from fastapi.responses import JSONResponse
+from fastapi import status
 
-class APIResponse:
-    """API响应格式化工具"""
-    
-    @staticmethod
-    def success(data=None, message='success', code=200):
-        """
-        成功响应
-        :param data: 响应数据
-        :param message: 响应消息
-        :param code: 响应码
-        """
-        response = {
-            'code': code,
-            'message': message
+def create_response(
+    code: int,
+    message: str,
+    data: Any = None,
+    status_code: int = status.HTTP_200_OK
+) -> JSONResponse:
+    """创建统一响应格式"""
+    return JSONResponse(
+        status_code=status_code,
+        content={
+            "code": code,
+            "message": message,
+            "data": data
         }
-        if data is not None:
-            response['data'] = data
-        return jsonify(response)
-    
-    @staticmethod
-    def error(message='error', code=400, data=None):
-        """
-        错误响应
-        :param message: 错误消息
-        :param code: 错误码
-        :param data: 错误数据
-        """
-        response = {
-            'code': code,
-            'message': message
-        }
-        if data is not None:
-            response['data'] = data
-        return jsonify(response)
-    
-    @staticmethod
-    def validation_error(errors):
-        """
-        参数验证错误响应
-        :param errors: 错误信息
-        """
-        return jsonify({
-            'code': ErrorCode.INVALID_PARAMS.code,
-            'message': '参数验证失败',
-            'data': errors
-        })
-    
-    @staticmethod
-    def unauthorized(message='未授权访问'):
-        """
-        未授权响应
-        :param message: 错误消息
-        """
-        return jsonify({
-            'code': ErrorCode.UNAUTHORIZED.code,
-            'message': message
-        }), 401
-    
-    @staticmethod
-    def forbidden(message='禁止访问'):
-        """
-        禁止访问响应
-        :param message: 错误消息
-        """
-        return jsonify({
-            'code': ErrorCode.PERMISSION_DENIED.code,
-            'message': message
-        }), 403
-    
-    @staticmethod
-    def not_found(message='资源不存在'):
-        """
-        资源不存在响应
-        :param message: 错误消息
-        """
-        return jsonify({
-            'code': 404,
-            'message': message
-        }), 404 
+    )
+
+def success_response(
+    data: Any = None,
+    message: str = "Success",
+    status_code: int = status.HTTP_200_OK
+) -> JSONResponse:
+    """成功响应"""
+    return create_response(200, message, data, status_code)
+
+def error_response(
+    message: str,
+    status_code: int = status.HTTP_400_BAD_REQUEST,
+    data: Any = None
+) -> JSONResponse:
+    """错误响应"""
+    return create_response(status_code, message, data, status_code)
+
+def unauthorized_error(
+    message: str = "未授权访问",
+    data: Any = None
+) -> JSONResponse:
+    """未授权错误"""
+    return create_response(
+        status.HTTP_401_UNAUTHORIZED,
+        message,
+        data,
+        status.HTTP_401_UNAUTHORIZED
+    )
+
+def forbidden_error(
+    message: str = "权限不足",
+    data: Any = None
+) -> JSONResponse:
+    """禁止访问错误"""
+    return create_response(
+        status.HTTP_403_FORBIDDEN,
+        message,
+        data,
+        status.HTTP_403_FORBIDDEN
+    )
+
+def not_found_error(
+    message: str = "资源不存在",
+    data: Any = None
+) -> JSONResponse:
+    """资源不存在错误"""
+    return create_response(
+        status.HTTP_404_NOT_FOUND,
+        message,
+        data,
+        status.HTTP_404_NOT_FOUND
+    )
+
+def server_error(
+    message: str = "服务器内部错误",
+    data: Any = None
+) -> JSONResponse:
+    """服务器错误"""
+    return create_response(
+        status.HTTP_500_INTERNAL_SERVER_ERROR,
+        message,
+        data,
+        status.HTTP_500_INTERNAL_SERVER_ERROR
+    ) 

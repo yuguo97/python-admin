@@ -1,0 +1,83 @@
+2025-01-03 16:56:53,889 - manage - INFO - 创建docs目录
+2025-01-03 16:56:53,890 - manage - INFO - 生成README.md成功
+2025-01-03 16:56:53,986 - manage - INFO - 生成API文档成功
+2025-01-03 16:56:53,987 - manage - INFO - 生成开发指南成功
+2025-01-03 16:58:28,990 - manage - INFO - 生成README.md成功
+2025-01-03 16:58:28,991 - manage - INFO - 生成API文档成功
+2025-01-03 16:58:28,992 - manage - INFO - 生成开发指南成功
+2025-01-03 16:58:59,142 - manage - INFO - 创建docs目录
+2025-01-03 16:58:59,143 - manage - INFO - 生成README.md成功
+2025-01-03 16:58:59,145 - manage - INFO - 生成API文档成功
+2025-01-03 16:58:59,146 - manage - INFO - 生成开发指南成功
+2025-01-03 17:04:13,854 - manage - INFO - 正在启动服务: all
+2025-01-03 17:04:13,960 - manage - INFO - MySQL连接成功
+2025-01-03 17:04:14,318 - manage - INFO - MongoDB连接成功
+2025-01-03 17:04:14,389 - manage - INFO - Redis连接成功
+2025-01-03 17:04:14,396 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:04:14,405 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:04:14,415 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:07:25,495 - manage - INFO - 正在启动服务: all
+2025-01-03 17:07:25,585 - manage - INFO - MySQL连接成功
+2025-01-03 17:07:25,908 - manage - INFO - MongoDB连接成功
+2025-01-03 17:07:25,980 - manage - INFO - Redis连接成功
+2025-01-03 17:07:25,987 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:07:25,995 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:07:26,006 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:09:06,412 - manage - INFO - 正在启动服务: all
+2025-01-03 17:09:06,504 - manage - INFO - MySQL连接成功
+2025-01-03 17:09:06,860 - manage - INFO - MongoDB连接成功
+2025-01-03 17:09:06,931 - manage - INFO - Redis连接成功
+2025-01-03 17:09:06,938 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:09:06,947 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:09:06,956 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:10:31,560 - manage - INFO - 正在启动服务: all
+2025-01-03 17:10:31,657 - manage - INFO - MySQL连接成功
+2025-01-03 17:10:32,007 - manage - INFO - MongoDB连接成功
+2025-01-03 17:10:32,089 - manage - INFO - Redis连接成功
+2025-01-03 17:10:32,097 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:10:32,106 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:10:32,117 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:11:53,773 - manage - INFO - 正在启动服务: all
+2025-01-03 17:11:53,900 - manage - INFO - MySQL连接成功
+2025-01-03 17:11:54,305 - manage - INFO - MongoDB连接成功
+2025-01-03 17:11:54,391 - manage - INFO - Redis连接成功
+2025-01-03 17:11:54,399 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:11:54,409 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:11:54,418 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:16:43,258 - manage - INFO - 
+正在关闭所有服务...
+2025-01-03 17:16:43,259 - manage - INFO - admin 服务已关闭
+2025-01-03 17:16:43,260 - manage - INFO - crawler 服务已关闭
+2025-01-03 17:16:43,260 - manage - INFO - system 服务已关闭
+2025-01-03 17:20:53,835 - manage - INFO - 正在启动服务: all
+2025-01-03 17:20:53,929 - manage - INFO - MySQL连接成功
+2025-01-03 17:20:54,313 - manage - INFO - MongoDB连接成功
+2025-01-03 17:20:54,391 - manage - INFO - Redis连接成功
+2025-01-03 17:20:54,397 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:20:54,406 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:20:54,415 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:22:08,391 - manage - INFO - 
+正在关闭所有服务...
+2025-01-03 17:22:08,392 - manage - INFO - admin 服务已关闭
+2025-01-03 17:22:08,393 - manage - INFO - crawler 服务已关闭
+2025-01-03 17:22:08,394 - manage - INFO - system 服务已关闭
+2025-01-03 17:22:31,851 - manage - INFO - 正在启动服务: all
+2025-01-03 17:22:31,955 - manage - INFO - MySQL连接成功
+2025-01-03 17:22:32,280 - manage - INFO - MongoDB连接成功
+2025-01-03 17:22:32,353 - manage - INFO - Redis连接成功
+2025-01-03 17:22:32,360 - manage - INFO - admin 服务已启动，端口: 8000
+2025-01-03 17:22:32,368 - manage - INFO - crawler 服务已启动，端口: 8001
+2025-01-03 17:22:32,377 - manage - INFO - system 服务已启动，端口: 8002
+2025-01-03 17:25:15,994 - manage - INFO - 
+正在关闭所有服务...
+2025-01-03 17:25:15,995 - manage - INFO - admin 服务已关闭
+2025-01-03 17:25:15,996 - manage - INFO - crawler 服务已关闭
+2025-01-03 17:25:15,997 - manage - INFO - system 服务已关闭
+2025-01-03 17:28:35,798 - manage - ERROR - 启动服务失败: signal only works in main thread of the main interpreter
+2025-01-03 17:29:50,792 - manage - ERROR - 启动服务失败: Can't pickle local object 'start.<locals>.run_server'
+2025-01-03 17:30:53,877 - manage - INFO - 已启动 admin 服务，端口: 8000
+2025-01-03 17:30:53,928 - manage - INFO - 已启动 crawler 服务，端口: 8001
+2025-01-03 17:30:54,070 - manage - INFO - 已启动 system 服务，端口: 8002
+2025-01-03 17:32:32,357 - manage - INFO - 已启动 admin 服务，端口: 8000
+2025-01-03 17:32:32,366 - manage - INFO - 已启动 crawler 服务，端口: 8001
+2025-01-03 17:32:32,374 - manage - INFO - 已启动 system 服务，端口: 8002

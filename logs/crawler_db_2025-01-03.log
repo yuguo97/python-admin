@@ -1,0 +1,190 @@
+2025-01-03 17:04:16,762 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:04:16,766 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:04:17,099 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:04:17,132 - crawler_database - ERROR - 创建MongoDB索引失败: An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, unique: true, key: { novel_id: 1, chapter_number: 1 }, name: "novel_id_1_chapter_number_1" }, existing index: { v: 2, key: { novel_id: 1, chapter_number: 1 }, name: "novel_id_1_chapter_number_1" }, full error: {'ok': 0.0, 'errmsg': 'An existing index has the same name as the requested index. When index names are not specified, they are auto generated and can cause conflicts. Please refer to our documentation. Requested index: { v: 2, unique: true, key: { novel_id: 1, chapter_number: 1 }, name: "novel_id_1_chapter_number_1" }, existing index: { v: 2, key: { novel_id: 1, chapter_number: 1 }, name: "novel_id_1_chapter_number_1" }', 'code': 86, 'codeName': 'IndexKeySpecsConflict'}
+2025-01-03 17:05:16,874 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:05:16,880 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:05:17,166 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:05:17,170 - crawler_database - ERROR - 重新创建索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:05:17,171 - crawler_database - ERROR - 创建MongoDB索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:07:28,462 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:07:28,468 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:07:28,788 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:07:28,813 - crawler_database - ERROR - 重新创建索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:07:28,816 - crawler_database - ERROR - 创建MongoDB索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:07:51,441 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:07:51,455 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:07:51,948 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:07:51,952 - crawler_database - ERROR - 重新创建索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:07:51,953 - crawler_database - ERROR - 创建MongoDB索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:09:09,098 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:09:09,102 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:09:09,374 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:09:09,377 - crawler_database - ERROR - 重新创建索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:09:09,378 - crawler_database - ERROR - 创建MongoDB索引失败: 'Collection' object is not callable. If you meant to call the 'get_index_name' method on a 'Collection' object it is failing because no such method exists.
+2025-01-03 17:10:30,857 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:10:30,863 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:10:31,217 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:10:31,221 - crawler_database - ERROR - 索引操作失败: Index already exists with a different name: title_1, full error: {'ok': 0.0, 'errmsg': 'Index already exists with a different name: title_1', 'code': 85, 'codeName': 'IndexOptionsConflict'}
+2025-01-03 17:10:31,222 - crawler_database - ERROR - 创建MongoDB索引失败: Index already exists with a different name: title_1, full error: {'ok': 0.0, 'errmsg': 'Index already exists with a different name: title_1', 'code': 85, 'codeName': 'IndexOptionsConflict'}
+2025-01-03 17:10:34,555 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:10:34,560 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:10:34,854 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:10:34,875 - crawler_database - ERROR - 索引操作失败: Index already exists with a different name: title_1, full error: {'ok': 0.0, 'errmsg': 'Index already exists with a different name: title_1', 'code': 85, 'codeName': 'IndexOptionsConflict'}
+2025-01-03 17:10:34,877 - crawler_database - ERROR - 创建MongoDB索引失败: Index already exists with a different name: title_1, full error: {'ok': 0.0, 'errmsg': 'Index already exists with a different name: title_1', 'code': 85, 'codeName': 'IndexOptionsConflict'}
+2025-01-03 17:11:37,972 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:11:37,977 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:11:38,268 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:11:38,276 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:11:38,283 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:11:38,291 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:11:38,298 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:11:38,304 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:11:38,306 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:11:38,314 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:11:38,321 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:11:38,321 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:11:56,631 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:11:56,636 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:11:56,915 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:11:56,938 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:11:56,946 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:11:56,954 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:11:56,962 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:11:56,969 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:11:56,971 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:11:56,978 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:11:56,985 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:11:56,986 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:16:41,122 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:16:41,133 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:16:41,703 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:16:41,709 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:16:41,731 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:16:41,741 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:16:41,753 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:16:41,765 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:16:41,768 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:16:41,777 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:16:41,788 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:16:41,789 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:20:56,550 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:20:56,555 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:20:56,823 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:20:56,827 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:20:56,847 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:20:56,855 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:20:56,863 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:20:56,870 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:20:56,872 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:20:56,879 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:20:56,887 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:20:56,887 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:22:08,463 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:22:08,468 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:22:08,760 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:22:08,787 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:22:08,807 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:22:08,815 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:22:08,823 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:22:08,832 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:22:08,833 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:22:08,841 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:22:08,849 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:22:08,850 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:22:34,608 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:22:34,612 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:22:34,882 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:22:34,885 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:22:34,910 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:22:34,921 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:22:34,929 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:22:34,937 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:22:34,939 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:22:34,945 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:22:34,954 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:22:34,955 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:23:33,808 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:23:33,813 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:23:34,076 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:23:34,079 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:23:34,099 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:23:34,107 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:23:34,115 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:23:34,122 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:23:34,124 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:23:34,131 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:23:34,139 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:23:34,140 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:30:56,762 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:30:56,776 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:30:57,050 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:30:57,066 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:30:57,085 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:30:57,096 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:30:57,107 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:30:57,114 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:30:57,116 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:30:57,124 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:30:57,130 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:30:57,131 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:32:35,056 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:32:35,062 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:32:35,337 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:32:35,355 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:32:35,373 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:32:35,385 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:32:35,396 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:32:35,408 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:32:35,410 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:32:35,422 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:32:35,429 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:32:35,430 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:48:54,862 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:48:54,867 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:48:55,231 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:48:55,238 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:48:55,249 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:48:55,258 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:48:55,269 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:48:55,279 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:48:55,282 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:48:55,292 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:48:55,302 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:48:55,303 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:52:12,699 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:52:12,704 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:52:13,030 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:52:13,035 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:52:13,042 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:52:13,049 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:52:13,056 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:52:13,063 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:52:13,065 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:52:13,073 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:52:13,082 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:52:13,083 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:55:32,744 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:55:32,750 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:55:33,092 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:55:33,108 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:55:33,123 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:55:33,135 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:55:33,145 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:55:33,153 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:55:33,156 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:55:33,165 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:55:33,173 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:55:33,174 - crawler_database - INFO - MongoDB索引创建成功
+2025-01-03 17:59:41,133 - crawler_database - INFO - MongoDB异步连接已创建
+2025-01-03 17:59:41,137 - crawler_database - INFO - MongoDB同步连接已创建
+2025-01-03 17:59:41,449 - crawler_database - INFO - 开始创建MongoDB索引
+2025-01-03 17:59:41,474 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-01-03 17:59:41,494 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-01-03 17:59:41,501 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-01-03 17:59:41,509 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-01-03 17:59:41,517 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-01-03 17:59:41,518 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-01-03 17:59:41,526 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-01-03 17:59:41,538 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-01-03 17:59:41,539 - crawler_database - INFO - MongoDB索引创建成功
