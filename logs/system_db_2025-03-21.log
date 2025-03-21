@@ -1,2 +1,4 @@
 2025-03-21 09:19:20,434 - system_database - INFO - Redis连接已建立
 {"asctime": "2025-03-21 09:25:10,437", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,987", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-21 10:27:33,520", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
