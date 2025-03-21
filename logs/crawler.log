@@ -590,3 +590,64 @@ INFO:     Waiting for application startup.
 2025-01-03 17:59:41,540 - crawler_service - INFO - 爬虫服务初始化完成
 INFO:     Application startup complete.
 WARNING:  WatchFiles detected changes in 'admin_service\app\auth\security.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [26064] using WatchFiles
+2025-03-21 09:19:20,945 - crawler_database - INFO - MongoDB异步连接已创建
+2025-03-21 09:19:20,950 - crawler_database - INFO - MongoDB同步连接已创建
+INFO:     Started server process [5508]
+INFO:     Waiting for application startup.
+2025-03-21 09:19:21,560 - crawler_service - INFO - 初始化爬虫服务...
+2025-03-21 09:19:21,561 - crawler_database - INFO - 开始创建MongoDB索引
+2025-03-21 09:19:21,588 - crawler_database - INFO - 已删除集合 novels 的所有索引
+2025-03-21 09:19:21,623 - crawler_database - INFO - 创建索引成功: novels - idx_novels_title
+2025-03-21 09:19:21,633 - crawler_database - INFO - 创建索引成功: novels - idx_novels_source_url
+2025-03-21 09:19:21,640 - crawler_database - INFO - 创建索引成功: novels - idx_novels_status
+2025-03-21 09:19:21,650 - crawler_database - INFO - 创建索引成功: novels - idx_novels_created_at
+2025-03-21 09:19:21,750 - crawler_database - INFO - 已删除集合 chapters 的所有索引
+2025-03-21 09:19:21,762 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_novel_chapter
+2025-03-21 09:19:21,769 - crawler_database - INFO - 创建索引成功: chapters - idx_chapters_source_url
+2025-03-21 09:19:21,770 - crawler_database - INFO - MongoDB索引创建成功
+2025-03-21 09:19:21,770 - crawler_service - INFO - 爬虫服务初始化完成
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'utils\logger.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [3568] using WatchFiles
+{"asctime": "2025-03-21 09:25:10,636", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-21 09:25:10,640", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [35592]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-21 09:25:10,923", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,923", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,927", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,934", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,940", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,948", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,955", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,959", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,966", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,973", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,974", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,974", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [14864] using WatchFiles
+{"asctime": "2025-03-21 09:36:27,933", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-21 09:36:27,938", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [32668]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-21 09:36:28,318", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,318", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,338", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,347", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,356", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,365", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,372", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,374", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,384", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,393", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,394", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:36:28,394", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.

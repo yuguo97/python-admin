@@ -1,0 +1,6 @@
+2025-03-21 09:19:20,433 - system_service - INFO - 初始化系统监控服务...
+2025-03-21 09:19:20,435 - system_service - INFO - 系统监控服务初始化完成
+{"asctime": "2025-03-21 09:25:10,436", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,439", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,986", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,988", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}

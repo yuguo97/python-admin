@@ -36,7 +36,8 @@ def start(
 def init_db():
     """初始化数据库"""
     try:
-        # 初始化数据库代码...
+        from scripts.init_db import init_all
+        init_all()
         logger.info("数据库初始化成功")
     except Exception as e:
         logger.error(f"数据库初始化失败: {str(e)}")
@@ -46,8 +47,8 @@ def init_db():
 def create_admin():
     """创建管理员用户"""
     try:
-        # 创建管理员用户代码...
-        logger.info("管理员用户创建成功")
+        from scripts.create_admin import create_admin_user
+        create_admin_user()
     except Exception as e:
         logger.error(f"创建管理员用户失败: {str(e)}")
         sys.exit(1)

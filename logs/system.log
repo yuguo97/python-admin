@@ -550,3 +550,34 @@ INFO:     Waiting for application startup.
 2025-01-03 17:59:40,923 - system_service - INFO - 系统监控服务初始化完成
 INFO:     Application startup complete.
 WARNING:  WatchFiles detected changes in 'admin_service\app\auth\security.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [8640] using WatchFiles
+INFO:     Started server process [12124]
+INFO:     Waiting for application startup.
+2025-03-21 09:19:20,433 - system_service - INFO - 初始化系统监控服务...
+2025-03-21 09:19:20,434 - system_database - INFO - Redis连接已建立
+2025-03-21 09:19:20,435 - system_monitor - INFO - Redis连接已初始化
+2025-03-21 09:19:20,435 - system_service - INFO - 系统监控服务初始化完成
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'utils\logger.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [33356] using WatchFiles
+INFO:     Started server process [5212]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-21 09:25:10,436", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,437", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,438", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:25:10,439", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [32628] using WatchFiles
+INFO:     Started server process [15412]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-21 09:37:06,986", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,987", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,987", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-21 09:37:06,988", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.

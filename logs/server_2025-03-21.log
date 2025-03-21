@@ -1,0 +1,16 @@
+2025-03-21 09:19:17,288 - server - INFO - 后台管理服务已启动，进程ID: 31512
+2025-03-21 09:19:17,298 - server - INFO - 爬虫服务已启动，进程ID: 26064
+2025-03-21 09:19:17,309 - server - INFO - 系统监控服务已启动，进程ID: 8640
+2025-03-21 09:23:47,910 - server - INFO - 接收到终止信号，准备关闭服务...
+2025-03-21 09:23:47,913 - server - INFO - 正在停止 后台管理服务...
+2025-03-21 09:23:47,923 - server - INFO - 后台管理服务已停止
+2025-03-21 09:23:47,924 - server - INFO - 正在停止 爬虫服务...
+2025-03-21 09:23:47,932 - server - INFO - 爬虫服务已停止
+2025-03-21 09:23:47,932 - server - INFO - 正在停止 系统监控服务...
+2025-03-21 09:23:48,038 - server - INFO - 系统监控服务已停止
+{"asctime": "2025-03-21 09:25:08,495", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 9192", "taskName": null}
+{"asctime": "2025-03-21 09:25:08,503", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 3568", "taskName": null}
+{"asctime": "2025-03-21 09:25:08,516", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 33356", "taskName": null}
+{"asctime": "2025-03-21 09:36:23,555", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 27176", "taskName": null}
+{"asctime": "2025-03-21 09:36:23,779", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 14864", "taskName": null}
+{"asctime": "2025-03-21 09:36:24,089", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 32628", "taskName": null}

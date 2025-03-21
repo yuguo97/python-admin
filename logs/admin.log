@@ -665,3 +665,25 @@ WARNING:  WatchFiles detected changes in 'admin_service\app\auth\router.py'. Rel
 INFO:     Started server process [12420]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [31512] using WatchFiles
+2025-03-21 09:19:20,392 - admin_database - INFO - MySQL数据库连接已创建
+INFO:     Started server process [19832]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'utils\logger.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\test-demo\\admin_service', 'E:\\test-demo\\crawler_service', 'E:\\test-demo\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [9192] using WatchFiles
+{"asctime": "2025-03-21 09:25:10,717", "name": "admin_database", "levelname": "INFO", "message": "MySQL数据库连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [1888]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [27176] using WatchFiles
+{"asctime": "2025-03-21 09:36:27,980", "name": "admin_database", "levelname": "INFO", "message": "MySQL数据库连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [10272]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

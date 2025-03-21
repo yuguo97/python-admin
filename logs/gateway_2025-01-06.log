@@ -1,0 +1,83 @@
+2025-01-06 10:15:38,474 - gateway - INFO - API Gateway 启动
+2025-01-06 10:15:38,475 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:17:55,930 - gateway - INFO - API Gateway 启动
+2025-01-06 10:17:55,931 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:50:50,915 - gateway - INFO - API Gateway 关闭
+2025-01-06 10:50:53,512 - gateway - INFO - API Gateway 启动
+2025-01-06 10:50:53,513 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:50:55,068 - gateway - INFO - API Gateway 启动
+2025-01-06 10:50:55,069 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:51:11,429 - gateway - INFO - API Gateway 启动
+2025-01-06 10:51:11,430 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:52:10,470 - gateway - INFO - API Gateway 关闭
+2025-01-06 10:52:12,908 - gateway - INFO - API Gateway 启动
+2025-01-06 10:52:12,908 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:52:14,482 - gateway - INFO - API Gateway 启动
+2025-01-06 10:52:14,483 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:52:36,870 - gateway - INFO - API Gateway 关闭
+2025-01-06 10:52:38,382 - gateway - INFO - API Gateway 启动
+2025-01-06 10:52:38,382 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 10:53:37,315 - gateway - INFO - API Gateway 启动
+2025-01-06 10:53:37,316 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:01:20,090 - gateway - INFO - API Gateway 启动
+2025-01-06 11:01:20,090 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:01:48,511 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:01:53,360 - gateway - INFO - API Gateway 启动
+2025-01-06 11:01:53,360 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:03:29,965 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:04:00,413 - gateway - INFO - API Gateway 启动
+2025-01-06 11:04:00,414 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:04:56,337 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:04:58,341 - gateway - INFO - API Gateway 启动
+2025-01-06 11:04:58,342 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:05:16,973 - gateway - INFO - API Gateway 启动
+2025-01-06 11:05:16,974 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:07:07,222 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:12:12,888 - gateway - INFO - API Gateway 启动
+2025-01-06 11:12:12,889 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:14:05,242 - gateway - INFO - API Gateway 启动
+2025-01-06 11:14:05,242 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:19:05,521 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:19:07,412 - gateway - INFO - API Gateway 启动
+2025-01-06 11:19:07,413 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:23:00,535 - gateway - INFO - API Gateway 启动
+2025-01-06 11:23:00,536 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:25:27,843 - gateway - INFO - API Gateway 启动
+2025-01-06 11:25:27,844 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:28:52,976 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:28:55,329 - gateway - INFO - API Gateway 启动
+2025-01-06 11:28:55,330 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:35:51,547 - gateway - INFO - API Gateway 启动
+2025-01-06 11:35:51,548 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:40:39,811 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:40:43,408 - gateway - INFO - API Gateway 启动
+2025-01-06 11:40:43,409 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:43:46,902 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:44:12,643 - gateway - INFO - API Gateway 启动
+2025-01-06 11:44:12,644 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:45:40,777 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:45:42,819 - gateway - INFO - API Gateway 启动
+2025-01-06 11:45:42,819 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:47:15,004 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:47:17,404 - gateway - INFO - API Gateway 启动
+2025-01-06 11:47:17,405 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:47:21,025 - gateway - INFO - API Gateway 启动
+2025-01-06 11:47:21,026 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:47:34,744 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:47:36,996 - gateway - INFO - API Gateway 启动
+2025-01-06 11:47:36,996 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:47:48,589 - gateway - INFO - API Gateway 启动
+2025-01-06 11:47:48,590 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 11:48:25,572 - gateway - INFO - API Gateway 关闭
+2025-01-06 11:48:35,942 - gateway - INFO - API Gateway 启动
+2025-01-06 11:48:35,943 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 13:36:14,216 - gateway - INFO - API Gateway 启动
+2025-01-06 13:36:14,216 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 13:37:45,104 - gateway - INFO - API Gateway 关闭
+2025-01-06 13:37:47,837 - gateway - INFO - API Gateway 启动
+2025-01-06 13:37:47,838 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 13:38:24,681 - gateway - INFO - API Gateway 启动
+2025-01-06 13:38:24,683 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
+2025-01-06 13:39:18,195 - gateway - INFO - API Gateway 关闭
+2025-01-06 13:39:30,023 - gateway - INFO - API Gateway 启动
+2025-01-06 13:39:30,024 - gateway - INFO - 服务路由配置: {'admin': 'http://localhost:8001', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8003'}
