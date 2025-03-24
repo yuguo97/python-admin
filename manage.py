@@ -17,7 +17,7 @@ app = typer.Typer(help="""
 
 @app.command()
 def start(
-    service: str = typer.Option("all", help="服务名称 (admin/crawler/system/all)")
+    service: str = typer.Option("all", help="服务名称 (admin/crawler/system/ai/all)")
 ):
     """启动服务"""
     try:

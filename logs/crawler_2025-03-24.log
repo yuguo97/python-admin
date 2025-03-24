@@ -1,0 +1,8 @@
+{"asctime": "2025-03-24 15:43:23,845", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:43:23,917", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:45:29,681", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:45:29,749", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:56:43,331", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:56:43,375", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:59:41,679", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-24 15:59:41,722", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
