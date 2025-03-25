@@ -22,5 +22,12 @@ SERVICES = {
         "host": "0.0.0.0",
         "port": 8002,
         "logger": setup_logger("system_service", "system")
+    },
+    "ai": {
+        "name": "AI服务",
+        "module": "ai_service.app.main:app",
+        "host": "0.0.0.0",
+        "port": 8003,
+        "logger": setup_logger("ai_service", "ai")
     }
 } 

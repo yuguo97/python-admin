@@ -1,5 +1,5 @@
 import uvicorn
-import subprocess
+import multiprocessing
 import signal
 import sys
 import os
@@ -13,7 +13,7 @@ logger = setup_logger("server", "server")
 class ServiceManager:
     """服务管理器"""
     def __init__(self):
-        self.processes: Dict[str, subprocess.Popen] = {}
+        self.processes: Dict[str, multiprocessing.Process] = {}
         self.should_exit = False
         
         # 注册信号处理
@@ -28,52 +28,18 @@ class ServiceManager:
 
     def start_service(self, name: str, config: dict):
         """启动服务进程"""
-        cmd = [
-            sys.executable,
-            "-m", "uvicorn",
-            config["module"],
-            "--host", config["host"],
-            "--port", str(config["port"]),
-            "--reload",
-            "--reload-dir", "./admin_service",
-            "--reload-dir", "./crawler_service",
-            "--reload-dir", "./system_service",
-            "--reload-include", "*.py",
-            "--log-level", "info"
-        ]
+        logger.info(f"启动 {config['name']}...")
         
-        # 创建日志文件
-        log_path = f"logs/{name}.log"
-        log_file = open(log_path, "a", encoding="utf-8", buffering=1)  # 行缓冲
-        
-        # 使用 subprocess.Popen 捕获输出
-        process = subprocess.Popen(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            creationflags=subprocess.CREATE_NEW_PROCESS_GROUP,
-            universal_newlines=True,  # 使用文本模式
-            bufsize=1,  # 行缓冲
-            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 设置工作目录为项目根目录
+        process = multiprocessing.Process(
+            target=uvicorn.run,
+            kwargs={
+                "app": config["module"],
+                "host": config["host"],
+                "port": config["port"],
+                "reload": True
+            }
         )
-        
-        # 创建输出监控线程
-        def monitor_output(pipe, log_file, prefix):
-            try:
-                for line in pipe:
-                    # 写入日志文件
-                    log_file.write(line)
-                    log_file.flush()
-                    # 输出到控制台
-                    sys.stdout.write(f"[{name}] {line}")
-                    sys.stdout.flush()
-            except Exception as e:
-                logger.error(f"输出监控错误: {str(e)}")
-
-        import threading
-        threading.Thread(target=monitor_output, args=(process.stdout, log_file, ""), daemon=True).start()
-        threading.Thread(target=monitor_output, args=(process.stderr, log_file, "ERROR: "), daemon=True).start()
-
+        process.start()
         self.processes[name] = process
         logger.info(f"{config['name']}已启动，进程ID: {process.pid}")
 
@@ -91,7 +57,7 @@ class ServiceManager:
             while not self.should_exit:
                 all_running = True
                 for name, process in list(self.processes.items()):
-                    if process.poll() is not None:
+                    if not process.is_alive():
                         logger.error(f"{SERVICES[name]['name']}已停止，正在重启...")
                         # 重启服务
                         self.start_service(name, SERVICES[name])
@@ -112,13 +78,10 @@ class ServiceManager:
     def stop_all(self):
         """停止所有服务"""
         for name, process in self.processes.items():
-            if process.poll() is None:  # 进程仍在运行
+            if process.is_alive():  # 进程仍在运行
                 logger.info(f"正在停止 {SERVICES[name]['name']}...")
-                try:
-                    process.terminate()
-                    process.wait(timeout=5)  # 等待最多5秒
-                except subprocess.TimeoutExpired:
-                    process.kill()  # 如果进程没有及时退出，强制结束
+                process.terminate()
+                process.join(timeout=5)  # 等待最多5秒
                 logger.info(f"{SERVICES[name]['name']}已停止")
 
 def run_all():
@@ -129,22 +92,18 @@ def run_all():
 def run_service(service_name: str):
     """运行单个服务"""
     if service_name not in SERVICES:
-        logger.error(f"未知服务: {service_name}")
-        sys.exit(1)
-
-    config = SERVICES[service_name]
-    try:
-        logger.info(f"启动 {config['name']}...")
-        uvicorn.run(
-            app=config["module"],
-            host=config["host"],
-            port=config["port"],
-            reload=True,
-            log_level="info"
-        )
-    except Exception as e:
-        logger.error(f"服务启动失败: {str(e)}")
-        sys.exit(1)
+        logger.error(f"服务 {service_name} 不存在")
+        return
+    
+    service = SERVICES[service_name]
+    logger.info(f"启动 {service['name']}...")
+    
+    uvicorn.run(
+        app=service["module"],
+        host=service["host"],
+        port=service["port"],
+        reload=True
+    )
 
 if __name__ == "__main__":
     run_all() 

@@ -1,0 +1,108 @@
+{"asctime": "2025-03-25 15:30:08,218", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:30:08,222", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:30:08,541", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,557", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,566", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,574", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,581", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,589", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,591", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,596", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,603", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,604", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,335", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:34:28,340", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:34:28,578", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,594", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,601", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,608", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,613", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,620", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,622", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,630", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,636", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,637", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,560", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:36:37,564", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:36:37,811", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,833", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,851", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,857", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,863", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,869", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,870", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,876", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,881", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,882", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,131", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:39:21,136", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:39:21,434", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,437", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,444", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,449", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,456", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,463", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,464", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,472", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,478", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,479", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:12,718", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:42:12,723", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:42:12,994", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,008", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,017", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,024", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,030", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,039", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,041", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,047", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,054", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:42:13,055", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,417", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:46:02,422", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:46:02,706", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,711", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,720", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,729", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,737", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,747", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,749", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,758", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,766", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:46:02,767", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:09,990", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:49:09,995", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:49:10,225", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,230", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,236", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,242", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,248", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,256", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,258", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,266", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,273", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:49:10,274", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,190", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:51:11,194", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:51:11,430", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,445", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,451", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,457", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,464", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,470", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,472", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,478", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,484", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:51:11,485", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,165", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:52:33,172", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:52:33,423", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,426", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,432", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,437", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,443", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,448", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,450", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,455", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,463", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:52:33,464", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}

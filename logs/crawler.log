@@ -752,3 +752,143 @@ INFO:     Waiting for application startup.
 {"asctime": "2025-03-24 15:59:41,721", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
 {"asctime": "2025-03-24 15:59:41,722", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
 INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [21264] using WatchFiles
+{"asctime": "2025-03-25 15:30:08,218", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:30:08,222", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [17804]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:30:08,541", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,541", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,557", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,566", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,574", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,581", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,589", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,591", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,596", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,603", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,604", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,604", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+{"asctime": "2025-03-25 15:32:08,137", "name": "crawler_service", "levelname": "ERROR", "message": "全局异常: error_response() got an unexpected keyword argument 'code'", "taskName": "Task-5"}
+INFO:     127.0.0.1:52896 - "GET /docs HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 264, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\dependencies\utils.py", line 563, in solve_dependencies
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\dependencies\utils.py", line 592, in solve_dependencies
+    solved = await call(**sub_values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\security\http.py", line 308, in __call__
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\yuguo\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 88, in __call__
+    response = await handler(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\python-admin\crawler_service\app\main.py", line 84, in http_exception_handler
+    return error_response(
+           ^^^^^^^^^^^^^^^
+TypeError: error_response() got an unexpected keyword argument 'code'
+INFO:     127.0.0.1:52897 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  WatchFiles detected changes in 'services\__init__.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [30324] using WatchFiles
+{"asctime": "2025-03-25 15:34:28,335", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:34:28,340", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [29032]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:34:28,578", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,578", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,594", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,601", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,608", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,613", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,620", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,622", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,630", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,636", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,637", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,638", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'crawler_service\app\main.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [22116] using WatchFiles
+{"asctime": "2025-03-25 15:36:37,560", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:36:37,564", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [34436]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:36:37,811", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,811", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,833", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,851", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,857", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,863", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,869", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,870", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,876", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,881", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,882", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,882", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [23448] using WatchFiles
+{"asctime": "2025-03-25 15:39:21,131", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-25 15:39:21,136", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+INFO:     Started server process [26712]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:39:21,434", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,434", "name": "crawler_database", "levelname": "INFO", "message": "开始创建MongoDB索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,437", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 novels 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,444", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_title", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,449", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,456", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_status", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,463", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: novels - idx_novels_created_at", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,464", "name": "crawler_database", "levelname": "INFO", "message": "已删除集合 chapters 的所有索引", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,472", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_novel_chapter", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,478", "name": "crawler_database", "levelname": "INFO", "message": "创建索引成功: chapters - idx_chapters_source_url", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,479", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:21,479", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_service\app\models\__init__.py'. Reloading...

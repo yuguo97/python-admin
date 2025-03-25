@@ -9,6 +9,12 @@
 - 系统监控服务：实时监控系统状态
 - AI服务：提供本地大模型对话能力
 
+## 接口文档地址
+- 后台管理服务：http://localhost:8000/docs
+- 爬虫服务：http://localhost:8001/docs
+- 系统监控服务：http://localhost:8002/docs
+- AI服务：http://localhost:8003/docs
+
 ## 环境要求
 
 - Python 3.8+

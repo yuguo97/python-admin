@@ -1,3 +1,5 @@
+""" AI服务主应用 """
+
 from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
@@ -8,25 +10,31 @@ from typing import AsyncGenerator
 import json
 import time
 
-from .llm import LLMService
 from .models import (
-    ChatRequest, ChatResponse, ChatRecordResponse,
-    ChatRecordListResponse, ChatRecordQueryRequest,
+    ChatRequest,
+    ChatResponse,
+    ChatRecordResponse,
+    ChatRecordListResponse,
+    ChatRecordQueryRequest,
     ChatRecordDeleteRequest
 )
-from .database import get_db
+from .models.database import ChatRecord, init_db, get_db
 from .services.chat_service import ChatService
+from .services.llm import LLMService
 from .utils.logger import setup_logger
 
-# 设置日志记录器
-logger = setup_logger("ai_service", "ai")
+# 设置日志
+logger = setup_logger("ai_service", "ai_service.log")
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="AI Service",
-    description="AI服务 - 提供本地大模型对话能力",
+    title="AI服务",
+    description="提供AI对话和流式对话服务",
     version="1.0.0"
 )
+
+# 初始化数据库
+init_db()
 
 # 初始化LLM服务
 llm_service = LLMService()
@@ -35,6 +43,7 @@ llm_service = LLMService()
 async def startup_event():
     """服务启动时的事件处理"""
     logger.info("AI服务启动")
+    logger.info("数据库表初始化完成")
 
 @app.on_event("shutdown")
 async def shutdown_event():

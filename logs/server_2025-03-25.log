@@ -1,0 +1,101 @@
+{"asctime": "2025-03-25 15:30:06,024", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 34364", "taskName": null}
+{"asctime": "2025-03-25 15:30:06,030", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 21264", "taskName": null}
+{"asctime": "2025-03-25 15:30:06,038", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 17484", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,796", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,798", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,799", "name": "server", "levelname": "INFO", "message": "正在停止 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,808", "name": "server", "levelname": "INFO", "message": "后台管理服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,808", "name": "server", "levelname": "INFO", "message": "正在停止 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,816", "name": "server", "levelname": "INFO", "message": "爬虫服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,816", "name": "server", "levelname": "INFO", "message": "正在停止 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,824", "name": "server", "levelname": "INFO", "message": "系统监控服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,797", "name": "server", "levelname": "INFO", "message": "正在停止 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:33:39,825", "name": "server", "levelname": "INFO", "message": "后台管理服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:34:26,354", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 3444", "taskName": null}
+{"asctime": "2025-03-25 15:34:26,359", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 30324", "taskName": null}
+{"asctime": "2025-03-25 15:34:26,366", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 24600", "taskName": null}
+{"asctime": "2025-03-25 15:34:26,374", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 31764", "taskName": null}
+{"asctime": "2025-03-25 15:36:35,349", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 17900", "taskName": null}
+{"asctime": "2025-03-25 15:36:35,355", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 22116", "taskName": null}
+{"asctime": "2025-03-25 15:36:35,361", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 9112", "taskName": null}
+{"asctime": "2025-03-25 15:36:35,367", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 22716", "taskName": null}
+{"asctime": "2025-03-25 15:37:36,872", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:38:56,394", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:39:18,919", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 4400", "taskName": null}
+{"asctime": "2025-03-25 15:39:18,925", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 23448", "taskName": null}
+{"asctime": "2025-03-25 15:39:18,931", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 10872", "taskName": null}
+{"asctime": "2025-03-25 15:39:18,938", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 35204", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,576", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,577", "name": "server", "levelname": "INFO", "message": "正在停止 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,587", "name": "server", "levelname": "INFO", "message": "后台管理服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,588", "name": "server", "levelname": "INFO", "message": "正在停止 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,600", "name": "server", "levelname": "INFO", "message": "爬虫服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,601", "name": "server", "levelname": "INFO", "message": "正在停止 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,610", "name": "server", "levelname": "INFO", "message": "系统监控服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,611", "name": "server", "levelname": "INFO", "message": "正在停止 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:40:21,618", "name": "server", "levelname": "INFO", "message": "AI服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:41:01,578", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:02,714", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,900", "name": "server", "levelname": "INFO", "message": "启动 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,906", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 29460", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,907", "name": "server", "levelname": "INFO", "message": "启动 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,912", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 28012", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,913", "name": "server", "levelname": "INFO", "message": "启动 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,920", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 34908", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,921", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:09,928", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 27544", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,666", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,667", "name": "server", "levelname": "INFO", "message": "正在停止 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,676", "name": "server", "levelname": "INFO", "message": "后台管理服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,676", "name": "server", "levelname": "INFO", "message": "正在停止 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,684", "name": "server", "levelname": "INFO", "message": "爬虫服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,685", "name": "server", "levelname": "INFO", "message": "正在停止 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,694", "name": "server", "levelname": "INFO", "message": "系统监控服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,694", "name": "server", "levelname": "INFO", "message": "正在停止 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,704", "name": "server", "levelname": "INFO", "message": "AI服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:42:35,666", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:43:12,192", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:39,600", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,524", "name": "server", "levelname": "INFO", "message": "启动 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,531", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 24304", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,531", "name": "server", "levelname": "INFO", "message": "启动 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,536", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 31628", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,537", "name": "server", "levelname": "INFO", "message": "启动 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,544", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 30688", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,546", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:45:59,551", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 17864", "taskName": null}
+{"asctime": "2025-03-25 15:47:10,168", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,340", "name": "server", "levelname": "INFO", "message": "启动 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,346", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 27080", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,347", "name": "server", "levelname": "INFO", "message": "启动 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,352", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 9720", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,352", "name": "server", "levelname": "INFO", "message": "启动 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,358", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 7264", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,359", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:07,366", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 12980", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,484", "name": "server", "levelname": "INFO", "message": "接收到终止信号，准备关闭服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,485", "name": "server", "levelname": "INFO", "message": "正在停止 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,495", "name": "server", "levelname": "INFO", "message": "后台管理服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,496", "name": "server", "levelname": "INFO", "message": "正在停止 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,506", "name": "server", "levelname": "INFO", "message": "爬虫服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,507", "name": "server", "levelname": "INFO", "message": "正在停止 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,515", "name": "server", "levelname": "INFO", "message": "系统监控服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,516", "name": "server", "levelname": "INFO", "message": "正在停止 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:49:56,526", "name": "server", "levelname": "INFO", "message": "AI服务已停止", "taskName": null}
+{"asctime": "2025-03-25 15:50:37,270", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,634", "name": "server", "levelname": "INFO", "message": "启动 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,640", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 17972", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,640", "name": "server", "levelname": "INFO", "message": "启动 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,646", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 31992", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,647", "name": "server", "levelname": "INFO", "message": "启动 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,654", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 33216", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,654", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:51:08,661", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 5716", "taskName": null}
+{"asctime": "2025-03-25 15:52:29,993", "name": "server", "levelname": "INFO", "message": "启动 后台管理服务...", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,089", "name": "server", "levelname": "INFO", "message": "后台管理服务已启动，进程ID: 26356", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,090", "name": "server", "levelname": "INFO", "message": "启动 爬虫服务...", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,199", "name": "server", "levelname": "INFO", "message": "爬虫服务已启动，进程ID: 13216", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,200", "name": "server", "levelname": "INFO", "message": "启动 系统监控服务...", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,316", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 23412", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,316", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
+{"asctime": "2025-03-25 15:52:30,441", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 26684", "taskName": null}

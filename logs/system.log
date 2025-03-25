@@ -633,3 +633,47 @@ INFO:     Waiting for application startup.
 {"asctime": "2025-03-24 15:59:41,218", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
 {"asctime": "2025-03-24 15:59:41,218", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
 INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [17484] using WatchFiles
+INFO:     Started server process [10836]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:30:08,031", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,032", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,033", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:30:08,034", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52867 - "GET /docs HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:52867 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [24600] using WatchFiles
+INFO:     Started server process [23268]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:34:28,169", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,170", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,170", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:34:28,172", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'crawler_service\app\main.py'. Reloading...
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [9112] using WatchFiles
+INFO:     Started server process [27116]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:36:37,303", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,304", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,305", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:36:37,305", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['E:\\python-admin\\admin_service', 'E:\\python-admin\\crawler_service', 'E:\\python-admin\\system_service']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [10872] using WatchFiles
+INFO:     Started server process [34168]
+INFO:     Waiting for application startup.
+{"asctime": "2025-03-25 15:39:20,946", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:20,947", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:20,947", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-25 15:39:20,948", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_service\app\models\__init__.py'. Reloading...

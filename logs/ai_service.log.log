@@ -1,0 +1,6 @@
+{"timestamp": "2025-03-25T15:50:38.906742", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T15:50:38.907739", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T15:51:11.279385", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T15:51:11.280386", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T15:52:33.501272", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T15:52:33.502778", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}

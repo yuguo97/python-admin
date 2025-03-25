@@ -83,7 +83,7 @@ async def http_exception_handler(request: Request, exc: HTTPException):
     """HTTP异常处理器"""
     return error_response(
         message=str(exc.detail),
-        code=exc.status_code
+        status_code=exc.status_code
     )
 
 @app.on_event("startup")
