@@ -7,3 +7,5 @@
 {"asctime": "2025-03-25 15:49:09,835", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:51:11,028", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:52:33,143", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:42,476", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:32,347", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}

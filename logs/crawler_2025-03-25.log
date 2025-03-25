@@ -22,3 +22,15 @@
 {"asctime": "2025-03-25 15:51:11,486", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:52:33,422", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:52:33,465", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:14,835", "name": "crawler_service", "levelname": "INFO", "message": "关闭爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:14,836", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:30,217", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:30,277", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:16,071", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:16,118", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:42,959", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:43,008", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:07,525", "name": "crawler_service", "levelname": "INFO", "message": "关闭爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:07,527", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:32,913", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:32,970", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}

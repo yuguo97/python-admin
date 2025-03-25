@@ -4,3 +4,13 @@
 {"timestamp": "2025-03-25T15:51:11.280386", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}
 {"timestamp": "2025-03-25T15:52:33.501272", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
 {"timestamp": "2025-03-25T15:52:33.502778", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:00:18.166957", "level": "INFO", "service": "ai_service", "message": "Request processed", "taskName": "Task-5", "method": "GET", "url": "http://localhost:8003/docs", "client": "127.0.0.1", "process_time_ms": 1.0, "status_code": 200}
+{"timestamp": "2025-03-25T16:00:19.186567", "level": "INFO", "service": "ai_service", "message": "Request processed", "taskName": "Task-10", "method": "GET", "url": "http://localhost:8003/openapi.json", "client": "127.0.0.1", "process_time_ms": 8.98, "status_code": 200}
+{"timestamp": "2025-03-25T16:02:14.788234", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u5173\u95ed", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:03:42.984195", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:03:42.985193", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:04:32.516635", "level": "INFO", "service": "ai_service", "message": "Request processed", "taskName": "Task-4", "method": "GET", "url": "http://localhost:8003/docs", "client": "127.0.0.1", "process_time_ms": 1.0, "status_code": 200}
+{"timestamp": "2025-03-25T16:04:33.139490", "level": "INFO", "service": "ai_service", "message": "Request processed", "taskName": "Task-9", "method": "GET", "url": "http://localhost:8003/openapi.json", "client": "127.0.0.1", "process_time_ms": 6.49, "status_code": 200}
+{"timestamp": "2025-03-25T16:06:07.557297", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u5173\u95ed", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:06:32.718584", "level": "INFO", "service": "ai_service", "message": "AI\u670d\u52a1\u542f\u52a8", "taskName": "Task-2"}
+{"timestamp": "2025-03-25T16:06:32.720579", "level": "INFO", "service": "ai_service", "message": "\u6570\u636e\u5e93\u8868\u521d\u59cb\u5316\u5b8c\u6210", "taskName": "Task-2"}

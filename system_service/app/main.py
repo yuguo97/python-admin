@@ -1,3 +1,5 @@
+""" 系统监控服务主应用 """
+
 from fastapi import FastAPI, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import (
@@ -31,8 +33,7 @@ app = FastAPI(
     """,
     version="1.0.0",
     docs_url=None,
-    redoc_url=None,
-    dependencies=[Depends(verify_token)]
+    redoc_url=None
 )
 
 # 配置CORS
@@ -59,11 +60,10 @@ async def custom_swagger_ui_html():
     )
 
 @app.get("/redoc", include_in_schema=False)
-async def redoc_html():
+async def custom_redoc_html():
     return get_redoc_html(
         openapi_url=app.openapi_url,
         title=app.title + " - ReDoc",
-        redoc_js_url="/static/redoc.standalone.js",
     )
 
 monitor = system_info.SystemMonitor()
@@ -90,7 +90,7 @@ async def shutdown_event():
     logger.info("系统监控服务已关闭")
 
 @app.get("/system")
-async def get_system_info():
+async def get_system_info(_: dict = Depends(verify_token)):
     """获取完整的系统信息"""
     logger.info("获取系统完整信息")
     try:
@@ -102,7 +102,7 @@ async def get_system_info():
         return server_error("获取系统信息失败")
 
 @app.get("/system/cpu")
-async def get_cpu_info():
+async def get_cpu_info(_: dict = Depends(verify_token)):
     """获取CPU信息"""
     logger.info("获取CPU信息")
     try:
@@ -114,7 +114,7 @@ async def get_cpu_info():
         return server_error("获取CPU信息失败")
 
 @app.get("/system/memory")
-async def get_memory_info():
+async def get_memory_info(_: dict = Depends(verify_token)):
     """获取内存信息"""
     logger.info("获取内存信息")
     try:
@@ -126,7 +126,7 @@ async def get_memory_info():
         return server_error("获取内存信息失败")
 
 @app.get("/system/disk")
-async def get_disk_info():
+async def get_disk_info(_: dict = Depends(verify_token)):
     """获取磁盘信息"""
     logger.info("获取磁盘信息")
     try:
@@ -138,7 +138,7 @@ async def get_disk_info():
         return server_error("获取磁盘信息失败")
 
 @app.get("/system/network")
-async def get_network_info():
+async def get_network_info(_: dict = Depends(verify_token)):
     """获取网络信息"""
     logger.info("获取网络信息")
     try:
@@ -150,7 +150,7 @@ async def get_network_info():
         return server_error("获取网络信息失败")
 
 @app.get("/system/processes")
-async def get_process_info(limit: int = 10):
+async def get_process_info(limit: int = 10, _: dict = Depends(verify_token)):
     """获取进程信息"""
     logger.info(f"获取进程信息, limit={limit}")
     try:
@@ -162,7 +162,7 @@ async def get_process_info(limit: int = 10):
         return server_error("获取进程信息失败")
 
 @app.get("/system/services")
-async def get_service_status():
+async def get_service_status(_: dict = Depends(verify_token)):
     """获取服务状态"""
     logger.info("获取服务状态")
     try:

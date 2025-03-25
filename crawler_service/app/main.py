@@ -1,3 +1,5 @@
+""" 爬虫服务主应用 """
+
 from fastapi import FastAPI, HTTPException, Request, Depends
 from typing import List
 from . import models
@@ -34,8 +36,7 @@ app = FastAPI(
     """,
     version="1.0.0",
     docs_url=None,
-    redoc_url=None,
-    dependencies=[Depends(verify_token)]
+    redoc_url=None
 )
 
 # 配置CORS
@@ -62,11 +63,10 @@ async def custom_swagger_ui_html():
     )
 
 @app.get("/redoc", include_in_schema=False)
-async def redoc_html():
+async def custom_redoc_html():
     return get_redoc_html(
         openapi_url=app.openapi_url,
         title=app.title + " - ReDoc",
-        redoc_js_url="/static/redoc.standalone.js",
     )
 
 crawler = NovelCrawler()
@@ -101,7 +101,7 @@ async def shutdown_event():
     logger.info("爬虫服务已关闭")
 
 @app.post("/novels")
-async def create_novel(url: str):
+async def create_novel(url: str, _: dict = Depends(verify_token)):
     """
     创建新小说爬取任务
     
@@ -144,7 +144,7 @@ async def create_novel(url: str):
         return server_error(f"爬取小说失败: {str(e)}")
 
 @app.post("/novels/{novel_id}/chapters")
-async def crawl_chapters(novel_id: str, chapter_urls: List[str]):
+async def crawl_chapters(novel_id: str, chapter_urls: List[str], _: dict = Depends(verify_token)):
     """
     爬取小说章节内容
     

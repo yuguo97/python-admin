@@ -20,3 +20,11 @@
 {"asctime": "2025-03-25 15:51:11,029", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:52:33,141", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
 {"asctime": "2025-03-25 15:52:33,144", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:14,803", "name": "system_service", "levelname": "INFO", "message": "关闭系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:02:14,805", "name": "system_service", "levelname": "INFO", "message": "系统监控服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:42,474", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:03:42,477", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:07,556", "name": "system_service", "levelname": "INFO", "message": "关闭系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:07,558", "name": "system_service", "levelname": "INFO", "message": "系统监控服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:32,346", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-25 16:06:32,349", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
