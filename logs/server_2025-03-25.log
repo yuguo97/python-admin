@@ -136,3 +136,4 @@
 {"asctime": "2025-03-25 16:06:29,531", "name": "server", "levelname": "INFO", "message": "系统监控服务已启动，进程ID: 5788", "taskName": null}
 {"asctime": "2025-03-25 16:06:29,532", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}
 {"asctime": "2025-03-25 16:06:29,539", "name": "server", "levelname": "INFO", "message": "AI服务已启动，进程ID: 18316", "taskName": null}
+{"asctime": "2025-03-25 16:16:07,271", "name": "server", "levelname": "INFO", "message": "启动 AI服务...", "taskName": null}

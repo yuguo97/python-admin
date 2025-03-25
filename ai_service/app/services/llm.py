@@ -2,7 +2,7 @@
 
 from typing import AsyncGenerator
 import httpx
-from ..utils.logger import setup_logger
+from utils.logger import setup_logger
 
 logger = setup_logger("llm_service", "llm_service.log")
 

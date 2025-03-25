@@ -21,7 +21,7 @@ from .models import (
 from .models.database import ChatRecord, init_db, get_db
 from .services.chat_service import ChatService
 from .services.llm import LLMService
-from .utils.logger import setup_logger
+from utils.logger import setup_logger
 
 # 设置日志
 logger = setup_logger("ai_service", "ai_service.log")
