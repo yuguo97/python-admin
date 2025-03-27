@@ -90,3 +90,5 @@
 {"asctime": "2025-03-27 13:56:43,565", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": null}
 {"asctime": "2025-03-27 13:56:46,375", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}
 {"asctime": "2025-03-27 13:56:46,376", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:30,307", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:30,308", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}

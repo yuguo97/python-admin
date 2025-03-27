@@ -133,3 +133,11 @@
 {"asctime": "2025-03-27 13:56:46,376", "name": "chat_service", "levelname": "INFO", "message": "初始化聊天服务", "taskName": "Task-1"}
 {"asctime": "2025-03-27 13:56:46,390", "name": "ai_service", "levelname": "INFO", "message": "初始化AI服务...", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,391", "name": "ai_service", "levelname": "INFO", "message": "AI服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,867", "name": "ai_service", "levelname": "INFO", "message": "关闭AI服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,868", "name": "ai_service", "levelname": "INFO", "message": "AI服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,306", "name": "ai_service", "levelname": "INFO", "message": "链路追踪功能已禁用", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:30,308", "name": "chat_service", "levelname": "INFO", "message": "初始化聊天服务", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:30,323", "name": "ai_service", "levelname": "INFO", "message": "初始化AI服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,324", "name": "ai_service", "levelname": "INFO", "message": "AI服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:36,927", "name": "ai_service", "levelname": "INFO", "message": "关闭AI服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:36,928", "name": "ai_service", "levelname": "INFO", "message": "AI服务已关闭", "taskName": "Task-2"}

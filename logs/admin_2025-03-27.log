@@ -71,3 +71,11 @@
 {"asctime": "2025-03-27 13:53:12,141", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,447", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,474", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,867", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,868", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,378", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,409", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:36,911", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:36,912", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,632", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,656", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}

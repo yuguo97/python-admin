@@ -23,7 +23,8 @@ load_dotenv()
 SERVICE_ROUTES = {
     "admin": f"http://localhost:{os.getenv('ADMIN_SERVICE_PORT')}",
     "system": f"http://localhost:{os.getenv('SYSTEM_SERVICE_PORT')}",
-    "crawler": f"http://localhost:{os.getenv('CRAWLER_SERVICE_PORT')}"
+    "crawler": f"http://localhost:{os.getenv('CRAWLER_SERVICE_PORT')}",
+    "ai": f"http://localhost:{os.getenv('AI_SERVICE_PORT')}"
 }
 
 @asynccontextmanager

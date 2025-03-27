@@ -72,3 +72,5 @@
 {"asctime": "2025-03-27 13:53:12,191", "name": "system_service", "levelname": "INFO", "message": "系统监控服务已关闭", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,220", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,223", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,836", "name": "system_service", "levelname": "INFO", "message": "关闭系统监控服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,837", "name": "system_service", "levelname": "INFO", "message": "系统监控服务已关闭", "taskName": "Task-2"}

@@ -60,3 +60,11 @@
 {"asctime": "2025-03-27 13:56:46,465", "name": "admin_database", "levelname": "INFO", "message": "表 roles 已存在且字段完整", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,470", "name": "admin_database", "levelname": "INFO", "message": "表 permissions 已存在且字段完整", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:56:46,473", "name": "admin_database", "levelname": "INFO", "message": "数据库表检查完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,395", "name": "admin_database", "levelname": "INFO", "message": "表 users 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,400", "name": "admin_database", "levelname": "INFO", "message": "表 roles 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,405", "name": "admin_database", "levelname": "INFO", "message": "表 permissions 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,408", "name": "admin_database", "levelname": "INFO", "message": "数据库表检查完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,645", "name": "admin_database", "levelname": "INFO", "message": "表 users 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,649", "name": "admin_database", "levelname": "INFO", "message": "表 roles 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,653", "name": "admin_database", "levelname": "INFO", "message": "表 permissions 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,655", "name": "admin_database", "levelname": "INFO", "message": "数据库表检查完成", "taskName": "Task-2"}

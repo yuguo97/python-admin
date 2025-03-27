@@ -34,3 +34,5 @@
 {"asctime": "2025-03-27 12:22:40,234", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:52:11,524", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
 {"asctime": "2025-03-27 13:53:12,190", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:56:46,222", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,836", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}

@@ -79,3 +79,9 @@
 {"asctime": "2025-03-27 13:56:43,277", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
 {"asctime": "2025-03-27 13:56:46,448", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
 {"asctime": "2025-03-27 13:56:46,486", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:26,886", "name": "crawler", "levelname": "INFO", "message": "数据库连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:30,589", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:30,634", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:36,930", "name": "crawler", "levelname": "INFO", "message": "数据库连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:06:39,812", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
+{"asctime": "2025-03-27 14:06:39,843", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
