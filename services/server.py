@@ -11,6 +11,7 @@ from admin_service.app.main import app as admin_app
 from crawler_service.app.main import app as crawler_app
 from system_service.app.main import app as system_app
 from ai_service.app.main import app as ai_app
+from gateway_service.app.main import app as gateway_app
 
 # 设置日志记录器
 logger = setup_logger("server", "server")
@@ -21,6 +22,7 @@ SERVICES = {
     "crawler": ("crawler_service.app.main:app", SERVICE_CONFIG["crawler_port"]),
     "system": ("system_service.app.main:app", SERVICE_CONFIG["system_port"]),
     "ai": ("ai_service.app.main:app", SERVICE_CONFIG["ai_port"]),
+    "gateway": ("gateway_service.app.main:app", SERVICE_CONFIG["gateway_port"]),
 }
 
 def run_service(service_name: str) -> None:

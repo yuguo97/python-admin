@@ -80,6 +80,8 @@ SERVICE_CONFIG = {
     "system_port": int(get_env_value("SYSTEM_PORT", "8002")),
     "ai_host": get_env_value("AI_HOST", "0.0.0.0"),
     "ai_port": int(get_env_value("AI_PORT", "8003")),
+    "gateway_host": get_env_value("GATEWAY_HOST", "0.0.0.0"),
+    "gateway_port": int(get_env_value("GATEWAY_PORT", "8999")),
     "enable_tracing": get_env_value("ENABLE_TRACING", "false").lower() == "true",
 }
 

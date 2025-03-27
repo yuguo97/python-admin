@@ -1,0 +1,53 @@
+{"asctime": "2025-03-27 14:12:47,711", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:12:47,712", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:13:02,082", "name": "gateway", "levelname": "INFO", "message": "转发请求到: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:13:03,662", "name": "gateway", "levelname": "INFO", "message": "请求成功: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:13:30,244", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:13:30,245", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:10,598", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:12,813", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:12,814", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:38,965", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:38,965", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:14:48,758", "name": "gateway", "levelname": "INFO", "message": "转发请求到: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:14:50,202", "name": "gateway", "levelname": "INFO", "message": "请求成功: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:15:12,894", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:14,405", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:14,406", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:22,810", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:24,268", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:24,269", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:36,946", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:38,316", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:38,316", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:52,169", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:15:52,169", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:16:10,428", "name": "gateway", "levelname": "INFO", "message": "转发请求到: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:16:11,898", "name": "gateway", "levelname": "INFO", "message": "请求成功: http://localhost:8003/docs", "taskName": "Task-5"}
+{"asctime": "2025-03-27 14:17:03,951", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:17:03,951", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:17:26,103", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:17:26,103", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:18:55,076", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:18:55,077", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:19:16,630", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:19:16,630", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:37,143", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:37,249", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:41,074", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:41,078", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:41,268", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:20:41,270", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:21:16,177", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:21:16,178", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:43,181", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:43,149", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:47,587", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:47,591", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:47,897", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:47,899", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:54,382", "name": "gateway", "levelname": "INFO", "message": "API Gateway 关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:55,937", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:23:55,938", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:24:31,765", "name": "gateway", "levelname": "INFO", "message": "API Gateway 启动", "taskName": "Task-2"}
+{"asctime": "2025-03-27 14:24:31,766", "name": "gateway", "levelname": "INFO", "message": "服务路由配置: {'admin': 'http://localhost:8000', 'system': 'http://localhost:8002', 'crawler': 'http://localhost:8001', 'ai': 'http://localhost:8003'}", "taskName": "Task-2"}

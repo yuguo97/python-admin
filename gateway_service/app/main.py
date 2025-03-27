@@ -13,6 +13,7 @@ from fastapi.openapi.docs import (
     get_swagger_ui_oauth2_redirect_html,
 )
 from utils.docs import setup_docs
+from fastapi.responses import StreamingResponse
 
 # 设置日志记录器
 logger = setup_logger("gateway", "gateway")
@@ -85,6 +86,17 @@ async def forward_request(service: str, path: str, request: Request) -> Dict[str
             )
             
             logger.info(f"请求成功: {url}")
+            
+            # 处理文档相关的响应
+            if path in ["/docs", "/redoc", "/openapi.json"]:
+                # 修改响应头，确保正确的内容类型
+                headers = dict(response.headers)
+                headers["content-type"] = "text/html"
+                return StreamingResponse(
+                    content=iter([response.content]),
+                    status_code=response.status_code,
+                    headers=headers
+                )
             return response.json()
         except httpx.RequestError as e:
             logger.error(f"服务请求失败 {url}: {str(e)}")
@@ -96,4 +108,7 @@ async def forward_request(service: str, path: str, request: Request) -> Dict[str
 @app.api_route("/{service}/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
 async def gateway_route(service: str, path: str, request: Request):
     """通用路由处理器"""
+    # 处理文档路径
+    if path in ["docs", "redoc", "openapi.json"]:
+        return await forward_request(service, f"/{path}", request)
     return await forward_request(service, f"/{path}", request) 
