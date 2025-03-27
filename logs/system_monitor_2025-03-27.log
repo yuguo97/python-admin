@@ -1,0 +1,13 @@
+{"asctime": "2025-03-27 09:45:23,957", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:45:35,862", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:46:05,652", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:48:07,892", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:50:47,806", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:50:58,549", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:51:40,399", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:52:13,236", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:53:05,739", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:53:43,760", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:32,735", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:39,853", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:56:04,205", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}

@@ -9,195 +9,152 @@ import asyncio
 from typing import AsyncGenerator
 import json
 import time
-
 from .models import (
-    ChatRequest,
-    ChatResponse,
-    ChatRecordResponse,
-    ChatRecordListResponse,
-    ChatRecordQueryRequest,
+    ChatRequest, ChatResponse, ChatRecordResponse,
+    ChatRecordListResponse, ChatRecordQueryRequest,
     ChatRecordDeleteRequest
 )
 from .models.database import ChatRecord, init_db, get_db
-from .services.chat_service import ChatService
+from .services.chat import ChatService
 from .services.llm import LLMService
 from utils.logger import setup_logger
-
-# 设置日志
-logger = setup_logger("ai_service", "ai_service.log")
-
-# 创建FastAPI应用
-app = FastAPI(
-    title="AI服务",
-    description="提供AI对话和流式对话服务",
-    version="1.0.0"
+from utils.response import (
+    success_response, error_response, server_error,
+    not_found_error, unauthorized_error
 )
+from utils.auth import verify_token
+from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
+
+# 设置日志记录器
+logger = setup_logger("ai_service", "ai")
+
+app = FastAPI(
+    title="AI对话服务",
+    description="""
+    提供基于大语言模型的对话服务。
+    
+    ## 功能特点
+    * 文本对话
+    * 流式响应
+    * 对话历史记录
+    * 上下文管理
+    """,
+    version="1.0.0",
+    docs_url=None,
+    redoc_url=None
+)
+
+# 初始化链路追踪
+init_tracing(app, "ai-service")
+
+# 配置CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# 初始化服务
+chat_service = ChatService()
+llm_service = LLMService()
 
 # 初始化数据库
 init_db()
 
-# 初始化LLM服务
-llm_service = LLMService()
-
 @app.on_event("startup")
 async def startup_event():
-    """服务启动时的事件处理"""
-    logger.info("AI服务启动")
-    logger.info("数据库表初始化完成")
+    """服务启动时初始化"""
+    logger.info("初始化AI服务...")
+    logger.info("AI服务初始化完成")
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    """服务关闭时的事件处理"""
-    await llm_service.close()
-    logger.info("AI服务关闭")
+    """服务关闭时清理资源"""
+    logger.info("关闭AI服务...")
+    logger.info("AI服务已关闭")
 
-@app.middleware("http")
-async def log_requests(request: Request, call_next):
-    """记录请求日志的中间件"""
-    start_time = time.time()
-    response = await call_next(request)
-    process_time = (time.time() - start_time) * 1000
-    
-    log_data = {
-        "method": request.method,
-        "url": str(request.url),
-        "client": request.client.host if request.client else None,
-        "process_time_ms": round(process_time, 2),
-        "status_code": response.status_code
-    }
-    
-    logger.info(f"Request processed", extra=log_data)
-    return response
-
-@app.post("/chat", response_model=ChatResponse)
-async def chat(
-    request: ChatRequest,
-    db: Session = Depends(get_db)
-):
-    """同步聊天接口"""
-    try:
-        logger.info(f"收到同步对话请求", extra={"prompt": request.prompt})
-        start_time = time.time()
+@app.post("/chat")
+async def chat(request: ChatRequest, _: dict = Depends(verify_token)):
+    """发送对话请求"""
+    with create_span("chat") as span:
+        logger.info(f"收到对话请求: {request.prompt}")
+        add_span_attribute(span, "prompt", request.prompt)
         
-        response = await llm_service.chat(request.prompt)
-        process_time = (time.time() - start_time) * 1000
-        
-        # 保存对话记录
-        chat_record = ChatService.create_chat_record(db, request.prompt, response, is_stream=False)
-        
-        logger.info(
-            f"同步对话完成",
-            extra={
-                "chat_id": chat_record.id,
-                "process_time_ms": round(process_time, 2)
-            }
-        )
-        return ChatResponse(response=response)
-    except Exception as e:
-        logger.error(f"同步对话失败: {str(e)}", extra={"prompt": request.prompt})
-        raise HTTPException(status_code=500, detail=str(e))
+        try:
+            response = await chat_service.chat(request.prompt)
+            logger.info("对话响应成功")
+            add_span_attribute(span, "response", response)
+            set_span_status(span, StatusCode.OK)
+            return success_response(ChatResponse(response=response))
+        except Exception as e:
+            logger.error(f"对话请求失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"对话请求失败: {str(e)}")
 
 @app.post("/chat/stream")
-async def chat_stream(
-    request: ChatRequest,
-    db: Session = Depends(get_db)
-):
-    """SSE流式聊天接口"""
-    async def event_generator() -> AsyncGenerator[str, None]:
+async def chat_stream(request: ChatRequest, _: dict = Depends(verify_token)):
+    """发送流式对话请求"""
+    with create_span("chat_stream") as span:
+        logger.info(f"收到流式对话请求: {request.prompt}")
+        add_span_attribute(span, "prompt", request.prompt)
+        
         try:
-            logger.info(f"收到流式对话请求", extra={"prompt": request.prompt})
-            start_time = time.time()
+            async def event_generator() -> AsyncGenerator[str, None]:
+                async for chunk in chat_service.chat_stream(request.prompt):
+                    yield f"data: {json.dumps({'response': chunk})}\n\n"
+                    add_span_attribute(span, "chunk", chunk)
             
-            full_response = ""
-            async for chunk in llm_service.chat_stream(request.prompt):
-                full_response += chunk
-                yield f"data: {json.dumps({'content': chunk})}\n\n"
-            
-            # 保存完整的对话记录
-            chat_record = ChatService.create_chat_record(db, request.prompt, full_response, is_stream=True)
-            
-            process_time = (time.time() - start_time) * 1000
-            logger.info(
-                f"流式对话完成",
-                extra={
-                    "chat_id": chat_record.id,
-                    "process_time_ms": round(process_time, 2)
-                }
-            )
-            
+            set_span_status(span, StatusCode.OK)
+            return EventSourceResponse(event_generator())
         except Exception as e:
-            logger.error(f"流式对话失败: {str(e)}", extra={"prompt": request.prompt})
-            yield f"data: {json.dumps({'error': str(e)})}\n\n"
-    
-    return EventSourceResponse(event_generator())
+            logger.error(f"流式对话请求失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"流式对话请求失败: {str(e)}")
 
-@app.get("/chat/records", response_model=ChatRecordListResponse)
-def get_chat_records(
-    request: ChatRecordQueryRequest,
-    db: Session = Depends(get_db)
+@app.get("/chat/records")
+async def get_chat_records(
+    request: ChatRecordQueryRequest = Depends(),
+    _: dict = Depends(verify_token)
 ):
     """获取对话记录列表"""
-    try:
-        logger.info("查询对话记录", extra={"params": request.dict()})
-        records = ChatService.get_chat_records(
-            db,
-            skip=request.skip,
-            limit=request.limit,
-            start_time=request.start_time,
-            end_time=request.end_time
-        )
-        total = len(records)
-        logger.info(f"查询对话记录成功", extra={"total": total})
-        return ChatRecordListResponse(total=total, records=records)
-    except Exception as e:
-        logger.error(f"查询对话记录失败: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/chat/records/{record_id}", response_model=ChatRecordResponse)
-def get_chat_record(
-    record_id: int,
-    db: Session = Depends(get_db)
-):
-    """获取单个对话记录"""
-    try:
-        logger.info(f"查询单条对话记录", extra={"record_id": record_id})
-        record = ChatService.get_chat_record(db, record_id)
-        if not record:
-            logger.warning(f"对话记录不存在", extra={"record_id": record_id})
-            raise HTTPException(status_code=404, detail="对话记录不存在")
-        logger.info(f"查询单条对话记录成功", extra={"record_id": record_id})
-        return record
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"查询单条对话记录失败: {str(e)}", extra={"record_id": record_id})
-        raise HTTPException(status_code=500, detail=str(e))
+    with create_span("get_chat_records") as span:
+        logger.info("获取对话记录列表")
+        add_span_attribute(span, "page", str(request.page))
+        add_span_attribute(span, "page_size", str(request.page_size))
+        
+        try:
+            records = await chat_service.get_chat_records(request)
+            logger.info(f"获取到 {len(records.items)} 条对话记录")
+            add_span_attribute(span, "records.count", str(len(records.items)))
+            set_span_status(span, StatusCode.OK)
+            return success_response(records)
+        except Exception as e:
+            logger.error(f"获取对话记录失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"获取对话记录失败: {str(e)}")
 
 @app.delete("/chat/records")
-def delete_chat_records(
-    request: ChatRecordDeleteRequest,
-    db: Session = Depends(get_db)
+async def delete_chat_records(
+    request: ChatRecordDeleteRequest = Depends(),
+    _: dict = Depends(verify_token)
 ):
     """删除对话记录"""
-    try:
-        logger.info("删除对话记录", extra={"params": request.dict()})
-        if request.record_id:
-            success = ChatService.delete_chat_record(db, request.record_id)
-            if not success:
-                logger.warning(f"对话记录不存在", extra={"record_id": request.record_id})
-                raise HTTPException(status_code=404, detail="对话记录不存在")
-            logger.info(f"删除单条对话记录成功", extra={"record_id": request.record_id})
-            return {"message": "删除成功"}
-        else:
-            deleted_count = ChatService.delete_chat_records(
-                db,
-                start_time=request.start_time,
-                end_time=request.end_time
-            )
-            logger.info(f"批量删除对话记录成功", extra={"deleted_count": deleted_count})
-            return {"message": f"成功删除 {deleted_count} 条记录"}
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"删除对话记录失败: {str(e)}", extra={"params": request.dict()})
-        raise HTTPException(status_code=500, detail=str(e)) 
+    with create_span("delete_chat_records") as span:
+        logger.info("删除对话记录")
+        add_span_attribute(span, "record_id", str(request.record_id) if request.record_id else "all")
+        
+        try:
+            await chat_service.delete_chat_records(request)
+            logger.info("对话记录删除成功")
+            set_span_status(span, StatusCode.OK)
+            return success_response({"message": "对话记录删除成功"})
+        except Exception as e:
+            logger.error(f"删除对话记录失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"删除对话记录失败: {str(e)}") 

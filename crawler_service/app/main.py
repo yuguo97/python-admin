@@ -19,6 +19,7 @@ from fastapi.openapi.docs import (
 )
 from fastapi.staticfiles import StaticFiles
 from utils.auth import verify_token
+from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
 
 # 设置日志记录器
 logger = setup_logger("crawler_service", "crawler")
@@ -38,6 +39,9 @@ app = FastAPI(
     docs_url=None,
     redoc_url=None
 )
+
+# 初始化链路追踪
+init_tracing(app, "crawler-service")
 
 # 配置CORS
 app.add_middleware(
@@ -127,21 +131,30 @@ async def create_novel(url: str, _: dict = Depends(verify_token)):
         提交小说URL后会立即开始爬取小说基本信息，
         章节内容需要通过单独的接口爬取
     """
-    logger.info(f"开始爬取小说: {url}")
-    
-    # 检查是否已经存在
-    existing = await async_db.novels.find_one({"source_url": url})
-    if existing:
-        logger.warning(f"小说已存在: {url}")
-        return error_response("小说已存在", status_code=400)
-    
-    try:
-        novel = await crawler.crawl_novel(url)
-        logger.info(f"小说信息爬取成功: {novel.title}")
-        return success_response(novel.dict())
-    except Exception as e:
-        logger.error(f"爬取小说失败: {str(e)}")
-        return server_error(f"爬取小说失败: {str(e)}")
+    with create_span("create_novel") as span:
+        logger.info(f"开始爬取小说: {url}")
+        add_span_attribute(span, "novel.url", url)
+        
+        # 检查是否已经存在
+        existing = await async_db.novels.find_one({"source_url": url})
+        if existing:
+            logger.warning(f"小说已存在: {url}")
+            add_span_attribute(span, "novel.exists", "true")
+            set_span_status(span, StatusCode.ERROR, "小说已存在")
+            return error_response("小说已存在", status_code=400)
+        
+        try:
+            novel = await crawler.crawl_novel(url)
+            logger.info(f"小说信息爬取成功: {novel.title}")
+            add_span_attribute(span, "novel.title", novel.title)
+            add_span_attribute(span, "novel.author", novel.author)
+            set_span_status(span, StatusCode.OK)
+            return success_response(novel.dict())
+        except Exception as e:
+            logger.error(f"爬取小说失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"爬取小说失败: {str(e)}")
 
 @app.post("/novels/{novel_id}/chapters")
 async def crawl_chapters(novel_id: str, chapter_urls: List[str], _: dict = Depends(verify_token)):
@@ -164,20 +177,30 @@ async def crawl_chapters(novel_id: str, chapter_urls: List[str], _: dict = Depen
         这是一个异步任务，接口会立即返回，
         实际爬取过程在后台进行
     """
-    logger.info(f"开始爬取小说章节: {novel_id}, 章节数: {len(chapter_urls)}")
-    try:
-        # 检查小说是否存在
-        novel = await async_db.novels.find_one({"_id": ObjectId(novel_id)})
-        if not novel:
-            return not_found_error(f"小说不存在: {novel_id}")
+    with create_span("crawl_chapters") as span:
+        logger.info(f"开始爬取小说章节: {novel_id}, 章节数: {len(chapter_urls)}")
+        add_span_attribute(span, "novel.id", novel_id)
+        add_span_attribute(span, "chapters.count", str(len(chapter_urls)))
         
-        # 启动爬取任务
-        await crawler.crawl_chapters(ObjectId(novel_id), chapter_urls)
-        logger.info(f"章节爬取任务已启动: {novel_id}")
-        return success_response({"message": "章节爬取任务已启动"})
-    except Exception as e:
-        logger.error(f"爬取章节失败: {str(e)}")
-        return server_error(f"爬取章节失败: {str(e)}")
+        try:
+            # 检查小说是否存在
+            novel = await async_db.novels.find_one({"_id": ObjectId(novel_id)})
+            if not novel:
+                add_span_attribute(span, "novel.exists", "false")
+                set_span_status(span, StatusCode.ERROR, "小说不存在")
+                return not_found_error(f"小说不存在: {novel_id}")
+            
+            # 启动爬取任务
+            await crawler.crawl_chapters(ObjectId(novel_id), chapter_urls)
+            logger.info(f"章节爬取任务已启动: {novel_id}")
+            add_span_attribute(span, "task.status", "started")
+            set_span_status(span, StatusCode.OK)
+            return success_response({"message": "章节爬取任务已启动"})
+        except Exception as e:
+            logger.error(f"爬取章节失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"爬取章节失败: {str(e)}")
 
 @app.get("/novels")
 async def list_novels(skip: int = 0, limit: int = 10):

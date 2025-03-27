@@ -14,6 +14,7 @@ from utils.response import (
     success_response, error_response, server_error
 )
 from utils.auth import verify_token
+from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
 
 # 设置日志记录器
 logger = setup_logger("system_service", "system")
@@ -35,6 +36,9 @@ app = FastAPI(
     docs_url=None,
     redoc_url=None
 )
+
+# 初始化链路追踪
+init_tracing(app, "system-service")
 
 # 配置CORS
 app.add_middleware(
@@ -92,86 +96,121 @@ async def shutdown_event():
 @app.get("/system")
 async def get_system_info(_: dict = Depends(verify_token)):
     """获取完整的系统信息"""
-    logger.info("获取系统完整信息")
-    try:
-        info = monitor.get_system_info()
-        logger.info("系统信息获取成功")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取系统信息失败: {str(e)}")
-        return server_error("获取系统信息失败")
+    with create_span("get_system_info") as span:
+        logger.info("获取系统完整信息")
+        try:
+            info = monitor.get_system_info()
+            logger.info("系统信息获取成功")
+            add_span_attribute(span, "system.info", "success")
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取系统信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取系统信息失败")
 
 @app.get("/system/cpu")
 async def get_cpu_info(_: dict = Depends(verify_token)):
     """获取CPU信息"""
-    logger.info("获取CPU信息")
-    try:
-        info = monitor.get_cpu_info()
-        logger.info(f"CPU使用率: {info['total_cpu_usage']}%")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取CPU信息失败: {str(e)}")
-        return server_error("获取CPU信息失败")
+    with create_span("get_cpu_info") as span:
+        logger.info("获取CPU信息")
+        try:
+            info = monitor.get_cpu_info()
+            logger.info(f"CPU使用率: {info['total_cpu_usage']}%")
+            add_span_attribute(span, "cpu.usage", f"{info['total_cpu_usage']}%")
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取CPU信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取CPU信息失败")
 
 @app.get("/system/memory")
 async def get_memory_info(_: dict = Depends(verify_token)):
     """获取内存信息"""
-    logger.info("获取内存信息")
-    try:
-        info = monitor.get_memory_info()
-        logger.info(f"内存使用率: {info['percentage']}%")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取内存信息失败: {str(e)}")
-        return server_error("获取内存信息失败")
+    with create_span("get_memory_info") as span:
+        logger.info("获取内存信息")
+        try:
+            info = monitor.get_memory_info()
+            logger.info(f"内存使用率: {info['percentage']}%")
+            add_span_attribute(span, "memory.usage", f"{info['percentage']}%")
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取内存信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取内存信息失败")
 
 @app.get("/system/disk")
 async def get_disk_info(_: dict = Depends(verify_token)):
     """获取磁盘信息"""
-    logger.info("获取磁盘信息")
-    try:
-        info = monitor.get_disk_info()
-        logger.info(f"获取到 {len(info['partitions'])} 个分区信息")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取磁盘信息失败: {str(e)}")
-        return server_error("获取磁盘信息失败")
+    with create_span("get_disk_info") as span:
+        logger.info("获取磁盘信息")
+        try:
+            info = monitor.get_disk_info()
+            logger.info(f"获取到 {len(info['partitions'])} 个分区信息")
+            add_span_attribute(span, "disk.partitions", str(len(info['partitions'])))
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取磁盘信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取磁盘信息失败")
 
 @app.get("/system/network")
 async def get_network_info(_: dict = Depends(verify_token)):
     """获取网络信息"""
-    logger.info("获取网络信息")
-    try:
-        info = monitor.get_network_info()
-        logger.info(f"当前网络连接数: {info['connections']}")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取网络信息失败: {str(e)}")
-        return server_error("获取网络信息失败")
+    with create_span("get_network_info") as span:
+        logger.info("获取网络信息")
+        try:
+            info = monitor.get_network_info()
+            logger.info(f"当前网络连接数: {info['connections']}")
+            add_span_attribute(span, "network.connections", str(info['connections']))
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取网络信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取网络信息失败")
 
 @app.get("/system/processes")
 async def get_process_info(limit: int = 10, _: dict = Depends(verify_token)):
     """获取进程信息"""
-    logger.info(f"获取进程信息, limit={limit}")
-    try:
-        info = monitor.get_process_info(limit)
-        logger.info(f"获取到 {len(info['processes'])} 个进程信息")
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取进程信息失败: {str(e)}")
-        return server_error("获取进程信息失败")
+    with create_span("get_process_info") as span:
+        logger.info(f"获取进程信息, limit={limit}")
+        try:
+            info = monitor.get_process_info(limit)
+            logger.info(f"获取到 {len(info['processes'])} 个进程信息")
+            add_span_attribute(span, "processes.count", str(len(info['processes'])))
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取进程信息失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取进程信息失败")
 
 @app.get("/system/services")
 async def get_service_status(_: dict = Depends(verify_token)):
     """获取服务状态"""
-    logger.info("获取服务状态")
-    try:
-        info = {
-            "admin_service": monitor.check_service_status("admin", 8000),
-            "crawler_service": monitor.check_service_status("crawler", 8001),
-            "system_service": monitor.check_service_status("system", 8002)
-        }
-        return success_response(info)
-    except Exception as e:
-        logger.error(f"获取服务状态失败: {str(e)}")
-        return server_error("获取服务状态失败") 
+    with create_span("get_service_status") as span:
+        logger.info("获取服务状态")
+        try:
+            info = {
+                "admin_service": monitor.check_service_status("admin", 8000),
+                "crawler_service": monitor.check_service_status("crawler", 8001),
+                "system_service": monitor.check_service_status("system", 8002)
+            }
+            add_span_attribute(span, "services.status", str(info))
+            set_span_status(span, StatusCode.OK)
+            return success_response(info)
+        except Exception as e:
+            logger.error(f"获取服务状态失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error("获取服务状态失败") 

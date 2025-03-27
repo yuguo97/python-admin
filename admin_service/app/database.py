@@ -1,28 +1,37 @@
+"""后台管理服务数据库模块"""
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from utils.logger import setup_logger
 
 # 设置日志记录器
-logger = setup_logger("admin_database", "admin_db")
+logger = setup_logger("admin_database", "admin")
 
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:123456@localhost:3306/admin_service"
+# 数据库连接URL
+SQLALCHEMY_DATABASE_URL = "sqlite:///./admin.db"
 
-try:
-    engine = create_engine(
-        SQLALCHEMY_DATABASE_URL,
-        pool_size=5,  # 连接池大小
-        max_overflow=10,  # 超过连接池大小外最多创建的连接数
-        pool_timeout=30,  # 池中没有连接最多等待的时间
-        pool_recycle=1800,  # 多久之后对连接池中的连接进行一次回收
-    )
-    logger.info("MySQL数据库连接已创建")
-except Exception as e:
-    logger.error(f"MySQL数据库连接失败: {str(e)}")
-    raise
+# 创建数据库引擎
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL,
+    connect_args={"check_same_thread": False}  # 仅用于SQLite
+)
 
+# 创建会话工厂
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# 创建基类
 Base = declarative_base()
+
+def init_db():
+    """初始化数据库"""
+    try:
+        # 创建所有表
+        Base.metadata.create_all(bind=engine)
+        logger.info("数据库表创建成功")
+    except Exception as e:
+        logger.error(f"数据库表创建失败: {str(e)}")
+        raise
 
 def get_db():
     """获取数据库会话"""

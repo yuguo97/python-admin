@@ -1,0 +1,16 @@
+{"asctime": "2025-03-27 09:55:21,123", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:21,124", "name": "admin_database", "levelname": "INFO", "message": "数据库表创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:21,125", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:33,117", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:33,119", "name": "admin_database", "levelname": "INFO", "message": "数据库表创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:33,121", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:39,804", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:39,804", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:39,853", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:39,855", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:42,670", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:42,671", "name": "admin_database", "levelname": "INFO", "message": "数据库表创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:55:42,672", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:56:04,545", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:56:04,546", "name": "admin_database", "levelname": "INFO", "message": "数据库表创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 09:56:04,547", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
