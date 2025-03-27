@@ -1,10 +1,8 @@
-""" 爬虫服务主应用 """
+"""爬虫服务主模块"""
 
+import asyncio
 from fastapi import FastAPI, HTTPException, Request, Depends
 from typing import List
-from . import models
-from .database import async_db, init_indexes
-from .crawler import NovelCrawler
 from bson import ObjectId
 from utils.logger import setup_logger
 from utils.response import (
@@ -20,28 +18,23 @@ from fastapi.openapi.docs import (
 from fastapi.staticfiles import StaticFiles
 from utils.auth import verify_token
 from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
+from .routers import novels, chapters
+from .database import init_indexes, close_db
+from .crawler import NovelCrawler
 
 # 设置日志记录器
-logger = setup_logger("crawler_service", "crawler")
+logger = setup_logger("crawler", "crawler")
 
+# 创建FastAPI应用
 app = FastAPI(
-    title="爬虫管理服务",
-    description="""
-    提供网络小说爬取和管理功能的服务。
-    
-    ## 功能特点
-    * 小说信息爬取
-    * 章节内容爬取
-    * 异步爬虫实现
-    * MongoDB存储
-    """,
-    version="1.0.0",
-    docs_url=None,
-    redoc_url=None
+    title="爬虫服务",
+    description="小说爬虫服务API",
+    version="1.0.0"
 )
 
-# 初始化链路追踪
+# 初始化追踪系统
 init_tracing(app, "crawler-service")
+logger.info("追踪系统初始化成功")
 
 # 配置CORS
 app.add_middleware(
@@ -54,6 +47,13 @@ app.add_middleware(
 
 # 挂载静态文件
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# 注册路由
+app.include_router(novels.router, prefix="/api/v1", tags=["novels"])
+app.include_router(chapters.router, prefix="/api/v1", tags=["chapters"])
+
+# 创建爬虫实例
+crawler = NovelCrawler()
 
 # 自定义API文档路由
 @app.get("/docs", include_in_schema=False)
@@ -73,8 +73,6 @@ async def custom_redoc_html():
         title=app.title + " - ReDoc",
     )
 
-crawler = NovelCrawler()
-
 # 全局异常处理
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
@@ -92,17 +90,31 @@ async def http_exception_handler(request: Request, exc: HTTPException):
 
 @app.on_event("startup")
 async def startup_event():
-    """服务启动时初始化"""
-    logger.info("初始化爬虫服务...")
-    init_indexes()
-    logger.info("爬虫服务初始化完成")
+    """服务启动时执行"""
+    try:
+        # 初始化数据库索引
+        await init_indexes()
+        logger.info("数据库索引初始化成功")
+    except Exception as e:
+        logger.error(f"服务启动失败: {str(e)}")
+        raise
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    """服务关闭时清理资源"""
-    logger.info("关闭爬虫服务...")
-    await crawler.close_session()
-    logger.info("爬虫服务已关闭")
+    """服务关闭时执行"""
+    try:
+        # 关闭数据库连接
+        await close_db()
+        logger.info("数据库连接已关闭")
+    except Exception as e:
+        logger.error(f"服务关闭失败: {str(e)}")
+        raise
+
+@app.get("/")
+@create_span("health_check")
+async def health_check():
+    """健康检查接口"""
+    return {"status": "healthy", "service": "crawler"}
 
 @app.post("/novels")
 async def create_novel(url: str, _: dict = Depends(verify_token)):

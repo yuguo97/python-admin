@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, List
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from . import models, schemas
@@ -299,4 +299,174 @@ async def delete_user(
             logger.error(f"删除用户失败: {str(e)}")
             add_span_attribute(span, "error", str(e))
             set_span_status(span, StatusCode.ERROR, str(e))
-            return server_error("删除用户失败") 
+            return server_error("删除用户失败")
+
+# 角色相关路由
+@app.post("/roles/", response_model=schemas.Role)
+@create_span("create_role")
+async def create_role(role: schemas.RoleCreate, db: Session = Depends(get_db)):
+    """创建角色"""
+    try:
+        db_role = models.Role(**role.dict())
+        db.add(db_role)
+        db.commit()
+        db.refresh(db_role)
+        add_span_attribute("role_id", db_role.id)
+        set_span_status("success")
+        return db_role
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/roles/", response_model=List[schemas.Role])
+@create_span("list_roles")
+async def list_roles(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    """获取角色列表"""
+    try:
+        roles = db.query(models.Role).offset(skip).limit(limit).all()
+        add_span_attribute("count", len(roles))
+        set_span_status("success")
+        return roles
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/roles/{role_id}", response_model=schemas.Role)
+@create_span("get_role")
+async def get_role(role_id: int, db: Session = Depends(get_db)):
+    """获取角色详情"""
+    try:
+        role = db.query(models.Role).filter(models.Role.id == role_id).first()
+        if not role:
+            raise HTTPException(status_code=404, detail="角色不存在")
+        add_span_attribute("role_id", role_id)
+        set_span_status("success")
+        return role
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.put("/roles/{role_id}", response_model=schemas.Role)
+@create_span("update_role")
+async def update_role(role_id: int, role: schemas.RoleUpdate, db: Session = Depends(get_db)):
+    """更新角色"""
+    try:
+        db_role = db.query(models.Role).filter(models.Role.id == role_id).first()
+        if not db_role:
+            raise HTTPException(status_code=404, detail="角色不存在")
+        
+        for key, value in role.dict(exclude_unset=True).items():
+            setattr(db_role, key, value)
+        
+        db_role.updated_at = datetime.utcnow()
+        db.commit()
+        db.refresh(db_role)
+        add_span_attribute("role_id", role_id)
+        set_span_status("success")
+        return db_role
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.delete("/roles/{role_id}")
+@create_span("delete_role")
+async def delete_role(role_id: int, db: Session = Depends(get_db)):
+    """删除角色"""
+    try:
+        db_role = db.query(models.Role).filter(models.Role.id == role_id).first()
+        if not db_role:
+            raise HTTPException(status_code=404, detail="角色不存在")
+        
+        db.delete(db_role)
+        db.commit()
+        add_span_attribute("role_id", role_id)
+        set_span_status("success")
+        return {"message": "角色已删除"}
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+# 权限相关路由
+@app.post("/permissions/", response_model=schemas.Permission)
+@create_span("create_permission")
+async def create_permission(permission: schemas.PermissionCreate, db: Session = Depends(get_db)):
+    """创建权限"""
+    try:
+        db_permission = models.Permission(**permission.dict())
+        db.add(db_permission)
+        db.commit()
+        db.refresh(db_permission)
+        add_span_attribute("permission_id", db_permission.id)
+        set_span_status("success")
+        return db_permission
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/permissions/", response_model=List[schemas.Permission])
+@create_span("list_permissions")
+async def list_permissions(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    """获取权限列表"""
+    try:
+        permissions = db.query(models.Permission).offset(skip).limit(limit).all()
+        add_span_attribute("count", len(permissions))
+        set_span_status("success")
+        return permissions
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/permissions/{permission_id}", response_model=schemas.Permission)
+@create_span("get_permission")
+async def get_permission(permission_id: int, db: Session = Depends(get_db)):
+    """获取权限详情"""
+    try:
+        permission = db.query(models.Permission).filter(models.Permission.id == permission_id).first()
+        if not permission:
+            raise HTTPException(status_code=404, detail="权限不存在")
+        add_span_attribute("permission_id", permission_id)
+        set_span_status("success")
+        return permission
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.put("/permissions/{permission_id}", response_model=schemas.Permission)
+@create_span("update_permission")
+async def update_permission(permission_id: int, permission: schemas.PermissionUpdate, db: Session = Depends(get_db)):
+    """更新权限"""
+    try:
+        db_permission = db.query(models.Permission).filter(models.Permission.id == permission_id).first()
+        if not db_permission:
+            raise HTTPException(status_code=404, detail="权限不存在")
+        
+        for key, value in permission.dict(exclude_unset=True).items():
+            setattr(db_permission, key, value)
+        
+        db_permission.updated_at = datetime.utcnow()
+        db.commit()
+        db.refresh(db_permission)
+        add_span_attribute("permission_id", permission_id)
+        set_span_status("success")
+        return db_permission
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.delete("/permissions/{permission_id}")
+@create_span("delete_permission")
+async def delete_permission(permission_id: int, db: Session = Depends(get_db)):
+    """删除权限"""
+    try:
+        db_permission = db.query(models.Permission).filter(models.Permission.id == permission_id).first()
+        if not db_permission:
+            raise HTTPException(status_code=404, detail="权限不存在")
+        
+        db.delete(db_permission)
+        db.commit()
+        add_span_attribute("permission_id", permission_id)
+        set_span_status("success")
+        return {"message": "权限已删除"}
+    except Exception as e:
+        set_span_status("error")
+        raise HTTPException(status_code=400, detail=str(e)) 

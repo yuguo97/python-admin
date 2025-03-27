@@ -1,131 +1,119 @@
+"""爬虫服务数据库模块"""
+
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo import MongoClient, ASCENDING, IndexModel
 from pymongo.errors import OperationFailure
 from utils.logger import setup_logger
+from utils.config import MONGODB_URL, MONGODB_CONFIG
 
 # 设置日志记录器
-logger = setup_logger("crawler_database", "crawler_db")
+logger = setup_logger("crawler_database", "crawler_database")
 
-MONGO_URL = "mongodb://localhost:27017"
-DATABASE_NAME = "crawler_service"
+# 全局变量
+async_client = None
+sync_client = None
+async_db = None
+sync_db = None
+novels = None
+chapters = None
+sync_novels = None
+sync_chapters = None
 
-try:
-    # 异步MongoDB客户端
-    async_client = AsyncIOMotorClient(
-        MONGO_URL,
-        maxPoolSize=50,
-        waitQueueTimeoutMS=1000,
-        connectTimeoutMS=2000,
-    )
-    async_db = async_client[DATABASE_NAME]
-    logger.info("MongoDB异步连接已创建")
-
-    # 同步MongoDB客户端（用于初始化）
-    sync_client = MongoClient(MONGO_URL)
-    sync_db = sync_client[DATABASE_NAME]
-    logger.info("MongoDB同步连接已创建")
-except Exception as e:
-    logger.error(f"MongoDB连接失败: {str(e)}")
-    raise
-
-def drop_all_indexes(collection):
-    """删除集合的所有索引（保留_id索引）"""
+async def init_db():
+    """初始化数据库连接"""
+    global async_client, sync_client, async_db, sync_db, novels, chapters, sync_novels, sync_chapters
+    
     try:
-        collection.drop_indexes()
-        logger.info(f"已删除集合 {collection.name} 的所有索引")
+        # 异步MongoDB客户端
+        async_client = AsyncIOMotorClient(
+            MONGODB_URL,
+            maxPoolSize=50,
+            waitQueueTimeoutMS=1000,
+            connectTimeoutMS=2000,
+        )
+        async_db = async_client[MONGODB_CONFIG["database"]]
+        logger.info("MongoDB异步连接已创建")
+
+        # 同步MongoDB客户端（用于初始化）
+        sync_client = MongoClient(MONGODB_URL)
+        sync_db = sync_client[MONGODB_CONFIG["database"]]
+        logger.info("MongoDB同步连接已创建")
+
+        # 获取集合
+        novels = async_db.novels
+        chapters = async_db.chapters
+        sync_novels = sync_db.novels
+        sync_chapters = sync_db.chapters
+        
+        return True
     except Exception as e:
-        logger.error(f"删除索引失败: {str(e)}")
+        logger.error(f"MongoDB连接失败: {str(e)}")
         raise
 
 def create_indexes(collection, indexes):
-    """创建多个索引
-    
-    Args:
-        collection: MongoDB集合
-        indexes: 索引配置列表，每个配置包含 fields 和 options
-    """
+    """创建索引"""
     try:
-        # 先删除所有现有索引
-        drop_all_indexes(collection)
-        
-        # 创建新索引
-        for index_config in indexes:
-            collection.create_index(
-                index_config['fields'],
-                **index_config.get('options', {})
-            )
-            logger.info(f"创建索引成功: {collection.name} - {index_config['options'].get('name', 'unnamed')}")
-    except Exception as e:
+        collection.create_indexes(indexes)
+    except OperationFailure as e:
         logger.error(f"创建索引失败: {str(e)}")
         raise
 
-def init_indexes():
-    """初始化MongoDB索引"""
+async def init_indexes():
+    """初始化索引"""
     try:
-        logger.info("开始创建MongoDB索引")
-        
-        # 小说集合索引配置
+        # 确保数据库已连接
+        if not async_db or not sync_db:
+            await init_db()
+            
+        # 小说索引
         novel_indexes = [
-            {
-                'fields': [("title", ASCENDING)],
-                'options': {
-                    'unique': True,
-                    'name': 'idx_novels_title'
-                }
-            },
-            {
-                'fields': [("source_url", ASCENDING)],
-                'options': {
-                    'unique': True,
-                    'name': 'idx_novels_source_url'
-                }
-            },
-            {
-                'fields': [("status", ASCENDING)],
-                'options': {
-                    'name': 'idx_novels_status'
-                }
-            },
-            {
-                'fields': [("created_at", ASCENDING)],
-                'options': {
-                    'name': 'idx_novels_created_at'
-                }
-            }
+            IndexModel([("novel_id", ASCENDING)], unique=True),
+            IndexModel([("title", ASCENDING)]),
+            IndexModel([("author", ASCENDING)]),
+            IndexModel([("category", ASCENDING)]),
+            IndexModel([("status", ASCENDING)]),
+            IndexModel([("created_at", ASCENDING)]),
+            IndexModel([("updated_at", ASCENDING)]),
         ]
         
-        # 章节集合索引配置
+        # 章节索引
         chapter_indexes = [
-            {
-                'fields': [
-                    ("novel_id", ASCENDING),
-                    ("chapter_number", ASCENDING)
-                ],
-                'options': {
-                    'unique': True,
-                    'name': 'idx_chapters_novel_chapter'
-                }
-            },
-            {
-                'fields': [("source_url", ASCENDING)],
-                'options': {
-                    'unique': True,
-                    'name': 'idx_chapters_source_url'
-                }
-            }
+            IndexModel([("novel_id", ASCENDING), ("chapter_id", ASCENDING)], unique=True),
+            IndexModel([("novel_id", ASCENDING), ("title", ASCENDING)]),
+            IndexModel([("novel_id", ASCENDING), ("created_at", ASCENDING)]),
+            IndexModel([("novel_id", ASCENDING), ("updated_at", ASCENDING)]),
         ]
         
         # 创建索引
-        create_indexes(sync_db.novels, novel_indexes)
-        create_indexes(sync_db.chapters, chapter_indexes)
+        create_indexes(sync_novels, novel_indexes)
+        create_indexes(sync_chapters, chapter_indexes)
         
         logger.info("MongoDB索引创建成功")
     except Exception as e:
-        logger.error(f"创建MongoDB索引失败: {str(e)}")
+        logger.error(f"MongoDB索引创建失败: {str(e)}")
         raise
 
-async def close_mongo_connection():
+async def close_db():
     """关闭MongoDB连接"""
-    logger.info("关闭MongoDB连接")
-    async_client.close()
-    sync_client.close() 
+    global async_client, sync_client, async_db, sync_db, novels, chapters, sync_novels, sync_chapters
+    
+    try:
+        if async_client:
+            async_client.close()
+        if sync_client:
+            sync_client.close()
+            
+        # 重置全局变量
+        async_client = None
+        sync_client = None
+        async_db = None
+        sync_db = None
+        novels = None
+        chapters = None
+        sync_novels = None
+        sync_chapters = None
+        
+        logger.info("MongoDB连接已关闭")
+    except Exception as e:
+        logger.error(f"关闭MongoDB连接失败: {str(e)}")
+        raise 

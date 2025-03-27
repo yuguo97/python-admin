@@ -1,0 +1,42 @@
+{"asctime": "2025-03-27 11:36:25,646", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:36:25,707", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:36:25,716", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:36:25,716", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:36:57,512", "name": "init_db", "levelname": "ERROR", "message": "MySQL数据库初始化失败: (pymysql.err.OperationalError) (1049, \"Unknown database 'admin_service'\")\n(Background on this error at: https://sqlalche.me/e/20/e3q8)", "taskName": null}
+{"asctime": "2025-03-27 11:36:57,539", "name": "init_db", "levelname": "ERROR", "message": "数据库初始化失败: (pymysql.err.OperationalError) (1049, \"Unknown database 'admin_service'\")\n(Background on this error at: https://sqlalche.me/e/20/e3q8)", "taskName": null}
+{"asctime": "2025-03-27 11:37:39,055", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:37:39,793", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:37:40,109", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:37:40,179", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:37:40,180", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:38:49,981", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:38:50,404", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:38:50,732", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:38:50,806", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:38:50,807", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:39:48,459", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:39:48,894", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:39:49,358", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:39:49,428", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:39:49,429", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:40:46,075", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:40:46,499", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:40:46,804", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:40:46,873", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:40:46,874", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:41:04,174", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:41:04,585", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:41:04,878", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:41:04,946", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:41:04,946", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}
+{"asctime": "2025-03-27 11:45:20,460", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:45:21,034", "name": "init_db", "levelname": "ERROR", "message": "MySQL数据库初始化失败: module 'admin_service.app.models' has no attribute 'Users'", "taskName": null}
+{"asctime": "2025-03-27 11:45:21,035", "name": "init_db", "levelname": "ERROR", "message": "数据库初始化失败: module 'admin_service.app.models' has no attribute 'Users'", "taskName": null}
+{"asctime": "2025-03-27 11:46:59,374", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:47:00,389", "name": "init_db", "levelname": "ERROR", "message": "MySQL数据库初始化失败: 'Table' object has no attribute '__table__'", "taskName": null}
+{"asctime": "2025-03-27 11:47:00,390", "name": "init_db", "levelname": "ERROR", "message": "数据库初始化失败: 'Table' object has no attribute '__table__'", "taskName": null}
+{"asctime": "2025-03-27 11:47:50,379", "name": "init_db", "levelname": "INFO", "message": "数据库 admin_service 创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:47:51,116", "name": "init_db", "levelname": "INFO", "message": "MySQL数据库表检查完成", "taskName": null}
+{"asctime": "2025-03-27 11:47:51,415", "name": "init_db", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": null}
+{"asctime": "2025-03-27 11:47:51,482", "name": "init_db", "levelname": "INFO", "message": "Redis连接测试成功", "taskName": null}
+{"asctime": "2025-03-27 11:47:51,482", "name": "init_db", "levelname": "INFO", "message": "所有数据库初始化成功", "taskName": null}

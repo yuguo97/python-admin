@@ -1,0 +1,29 @@
+{"asctime": "2025-03-27 12:20:30,638", "name": "crawler", "levelname": "ERROR", "message": "服务启动失败: init_tracing() missing 1 required positional argument: 'service_name'", "taskName": "Task-2"}
+{"asctime": "2025-03-27 12:21:43,830", "name": "crawler", "levelname": "ERROR", "message": "服务启动失败: Cannot add middleware after an application has started", "taskName": "Task-2"}
+{"asctime": "2025-03-27 12:25:38,256", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:48:44,327", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:49:37,165", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:49:40,859", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:49:40,903", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:49:40,948", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:49:40,948", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:50:31,305", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:50:34,617", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:50:34,622", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:50:34,630", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:50:34,640", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:03,312", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:07,215", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:07,248", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:07,278", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:07,328", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:52:11,571", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
+{"asctime": "2025-03-27 13:52:11,903", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:53:12,160", "name": "crawler", "levelname": "INFO", "message": "数据库连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:56:39,850", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:56:43,211", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:56:43,254", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:56:43,256", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:56:43,277", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": null}
+{"asctime": "2025-03-27 13:56:46,448", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
+{"asctime": "2025-03-27 13:56:46,486", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}

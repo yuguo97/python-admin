@@ -24,6 +24,7 @@ from utils.response import (
 )
 from utils.auth import verify_token
 from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
+from utils.config import SERVICE_CONFIG
 
 # 设置日志记录器
 logger = setup_logger("ai_service", "ai")
@@ -39,13 +40,15 @@ app = FastAPI(
     * 对话历史记录
     * 上下文管理
     """,
-    version="1.0.0",
-    docs_url=None,
-    redoc_url=None
+    version="1.0.0"
 )
 
-# 初始化链路追踪
-init_tracing(app, "ai-service")
+# 根据配置决定是否启用链路追踪
+if SERVICE_CONFIG.get("enable_tracing", False):
+    init_tracing(app, "ai-service")
+    logger.info("链路追踪功能已启用")
+else:
+    logger.info("链路追踪功能已禁用")
 
 # 配置CORS
 app.add_middleware(

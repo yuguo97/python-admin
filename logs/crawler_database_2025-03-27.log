@@ -1,0 +1,15 @@
+{"asctime": "2025-03-27 12:06:04,693", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:06:04,699", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:06:38,042", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:06:38,048", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:09:29,153", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:09:29,157", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:11:21,732", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 12:11:21,737", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-1"}
+{"asctime": "2025-03-27 13:52:11,736", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:52:11,743", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:52:11,903", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:53:12,159", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:56:46,473", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:56:46,477", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-03-27 13:56:46,486", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
