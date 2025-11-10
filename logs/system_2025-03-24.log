@@ -1,8 +1,0 @@
-{"asctime": "2025-03-24 15:43:23,333", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:43:23,337", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:45:29,324", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:45:29,326", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:56:42,872", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:56:42,874", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:59:41,216", "name": "system_service", "levelname": "INFO", "message": "初始化系统监控服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:59:41,218", "name": "system_service", "levelname": "INFO", "message": "系统监控服务初始化完成", "taskName": "Task-2"}

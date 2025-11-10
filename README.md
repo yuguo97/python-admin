@@ -26,18 +26,21 @@
 
 ```
 .
-├── admin_service/     # 后台管理服务
-├── crawler_service/   # 爬虫服务
-├── system_service/    # 系统监控服务
-├── ai_service/        # AI服务
-├── gateway/           # API网关
-├── utils/             # 公共工具
-├── scripts/           # 脚本文件
-├── docs/              # 文档
-├── logs/              # 日志文件
-├── .env               # 环境配置
-├── manage.py          # 管理脚本
-└── requirements.txt   # 项目依赖
+├── admin_service/         # 后台管理服务
+├── crawler_service/       # 爬虫服务
+├── system_service/        # 系统监控服务
+├── ai_service/            # AI服务
+├── electron_admin/        # Electron桌面客户端
+│   ├── frontend/          # Vue3前端项目
+│   └── electron/          # Electron主进程
+├── gateway/               # API网关
+├── utils/                 # 公共工具
+├── scripts/               # 脚本文件
+├── docs/                  # 文档
+├── logs/                  # 日志文件
+├── .env                   # 环境配置
+├── manage.py              # 管理脚本
+└── requirements.txt       # Python依赖
 ```
 
 ## 环境配置
@@ -100,7 +103,7 @@ LOG_FORMAT=json
 
 ## 快速开始
 
-### 1. 安装依赖
+### 1. 安装Python依赖
 ```bash
 pip install -r requirements.txt
 ```
@@ -115,16 +118,44 @@ python manage.py init-db
 python manage.py create-admin
 ```
 
-### 4. 启动服务
+### 4. 启动后端服务
 ```bash
 # 启动所有服务
-python manage.py start --service all
+python manage.py start all
 
 # 或者启动单个服务
-python manage.py start --service admin    # 启动后台管理服务
-python manage.py start --service crawler  # 启动爬虫服务
-python manage.py start --service system   # 启动系统监控服务
-python manage.py start --service ai      # 启动AI服务
+python manage.py start admin    # 启动后台管理服务
+python manage.py start crawler  # 启动爬虫服务
+python manage.py start system   # 启动系统监控服务
+python manage.py start ai       # 启动AI服务
+```
+
+### 5. 启动Electron桌面客户端(可选)
+
+#### 安装前端依赖
+```bash
+cd electron_admin/frontend
+cnpm install
+# 或使用 npm install
+```
+
+#### 安装Electron依赖
+```bash
+cd electron_admin
+cnpm install
+# 或使用 npm install
+```
+
+#### 启动开发模式
+```bash
+cd electron_admin
+npm run dev
+```
+
+#### 打包应用
+```bash
+cd electron_admin
+npm run build
 ```
 
 ## 服务说明
@@ -190,11 +221,73 @@ CREATE TABLE chat_records (
    - test: 测试相关
    - chore: 其他修改
 
+## 常见问题
+
+### 1. 启动服务时提示 "No such option: --service"
+**原因**：命令格式错误，服务名称应该作为位置参数而不是选项参数。
+
+**解决方案**：
+```bash
+# 错误写法
+python manage.py start --service admin
+
+# 正确写法
+python manage.py start admin
+```
+
+### 2. 数据库连接失败
+**原因**：数据库服务未启动或配置错误。
+
+**解决方案**：
+- 检查MySQL、MongoDB、Redis服务是否启动
+- 检查 `.env` 文件中的数据库配置是否正确
+- 确认数据库用户权限是否足够
+
+### 3. Electron应用无法启动
+**原因**：依赖未安装或Node版本不兼容。
+
+**解决方案**：
+```bash
+# 清理依赖重新安装
+cd electron_admin
+rm -rf node_modules
+cnpm install
+
+# 清理前端依赖
+cd frontend
+rm -rf node_modules
+cnpm install
+```
+
+### 4. AI服务内存不足
+**原因**：模型文件较大，需要足够的内存和显存。
+
+**解决方案**：
+- 使用更小的模型
+- 增加系统内存
+- 使用GPU服务器
+
 ## 注意事项
-1. AI服务需要较大的内存和显存，建议使用GPU服务器
-2. 首次启动时会下载模型文件，需要等待一段时间
-3. 建议定期清理对话记录，避免数据库占用过大
+
+1. **AI服务资源需求**
+   - 需要较大的内存和显存，建议使用GPU服务器
+   - 首次启动时会下载模型文件，需要等待一段时间
+   - 建议定期清理对话记录，避免数据库占用过大
+
+2. **数据库配置**
+   - 确保MySQL、MongoDB、Redis服务正常运行
+   - 生产环境请修改默认密码和密钥
+   - 定期备份数据库
+
+3. **Electron客户端**
+   - 推荐使用cnpm安装依赖，速度更快
+   - 开发模式下前端和Electron需要分别启动
+   - 打包前确保后端服务地址配置正确
+
+4. **日志管理**
+   - 日志文件会持续增长，建议配置日志轮转
+   - 生产环境建议将日志级别设置为WARNING或ERROR
 
 ## 许可证
 
-MIT License 
+MIT License

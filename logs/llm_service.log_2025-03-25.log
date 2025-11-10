@@ -1,3 +1,0 @@
-{"asctime": "2025-03-25 16:23:09,798", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}
-{"asctime": "2025-03-25 16:23:09,808", "name": "llm_service", "levelname": "INFO", "message": "LLM服务关闭", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:11,994", "name": "llm_service", "levelname": "INFO", "message": "LLM服务初始化完成", "taskName": "Task-1"}

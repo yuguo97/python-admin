@@ -90,11 +90,13 @@ def init_db():
     try:
         # 导入模型以确保它们被注册到Base.metadata
         from . import models
+        from .users.models import User
+        from .menus.models import Menu
         
         # 定义需要检查的表和它们的字段
         tables_to_check = {
             "users": {
-                "class": models.User,
+                "class": User,
                 "columns": ["id", "username", "email", "hashed_password", "full_name", "is_active", "is_superuser", "last_login", "created_at", "updated_at"]
             },
             "roles": {
@@ -108,6 +110,10 @@ def init_db():
             "user_roles": {
                 "class": models.user_roles,
                 "columns": ["user_id", "role_id"]
+            },
+            "menus": {
+                "class": Menu,
+                "columns": ["id", "name", "code", "path", "component", "icon", "parent_id", "sort_order", "visible", "created_at", "updated_at"]
             }
         }
         

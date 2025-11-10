@@ -15,6 +15,7 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        'path': 'path-browserify'
       },
     },
     css: {
@@ -43,6 +44,13 @@ export default defineConfig(({ command, mode }) => {
         },
       },
     },
+    // 开发服务器配置
+    server: {
+      port: 8900,
+      host: '0.0.0.0',
+      open: false
+      // 不再需要代理配置，所有请求通过网关统一管理
+    }
   }
 })
 

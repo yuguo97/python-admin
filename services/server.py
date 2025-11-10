@@ -7,11 +7,6 @@ import multiprocessing
 from typing import Dict, List
 from utils.logger import setup_logger
 from utils.config import SERVICE_CONFIG
-from admin_service.app.main import app as admin_app
-from crawler_service.app.main import app as crawler_app
-from system_service.app.main import app as system_app
-from ai_service.app.main import app as ai_app
-from gateway_service.app.main import app as gateway_app
 
 # 设置日志记录器
 logger = setup_logger("server", "server")

@@ -1,4 +1,0 @@
-{"asctime": "2025-03-24 15:43:23,336", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:45:29,325", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:56:42,873", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
-{"asctime": "2025-03-24 15:59:41,218", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}

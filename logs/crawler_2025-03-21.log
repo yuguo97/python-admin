@@ -1,8 +1,0 @@
-2025-03-21 09:19:21,560 - crawler_service - INFO - 初始化爬虫服务...
-2025-03-21 09:19:21,770 - crawler_service - INFO - 爬虫服务初始化完成
-{"asctime": "2025-03-21 09:25:10,923", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-21 09:25:10,974", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-21 09:36:28,318", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-21 09:36:28,394", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-21 10:27:34,142", "name": "crawler_service", "levelname": "INFO", "message": "初始化爬虫服务...", "taskName": "Task-2"}
-{"asctime": "2025-03-21 10:27:34,224", "name": "crawler_service", "levelname": "INFO", "message": "爬虫服务初始化完成", "taskName": "Task-2"}

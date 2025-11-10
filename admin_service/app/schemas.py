@@ -34,6 +34,7 @@ class Permission(PermissionBase):
 class RoleBase(BaseModel):
     """角色基础模型"""
     name: str
+    code: str
     description: Optional[str] = None
 
 class RoleCreate(RoleBase):
@@ -43,11 +44,13 @@ class RoleCreate(RoleBase):
 class RoleUpdate(BaseModel):
     """角色更新模型"""
     name: Optional[str] = None
+    code: Optional[str] = None
     description: Optional[str] = None
 
 class Role(RoleBase):
     """角色响应模型"""
     id: int
+    code: str
     created_at: datetime
     updated_at: Optional[datetime] = None
     permissions: List[Permission] = []

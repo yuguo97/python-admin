@@ -1,8 +1,0 @@
-{"asctime": "2025-03-25 16:17:50,708", "name": "ai_service", "levelname": "INFO", "message": "AI服务启动", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:17:50,708", "name": "ai_service", "levelname": "INFO", "message": "数据库表初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:07,856", "name": "ai_service", "levelname": "INFO", "message": "AI服务关闭", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:09,806", "name": "ai_service", "levelname": "INFO", "message": "AI服务启动", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:09,807", "name": "ai_service", "levelname": "INFO", "message": "数据库表初始化完成", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:09,809", "name": "ai_service", "levelname": "INFO", "message": "AI服务关闭", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:12,001", "name": "ai_service", "levelname": "INFO", "message": "AI服务启动", "taskName": "Task-2"}
-{"asctime": "2025-03-25 16:23:12,002", "name": "ai_service", "levelname": "INFO", "message": "数据库表初始化完成", "taskName": "Task-2"}

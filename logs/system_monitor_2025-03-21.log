@@ -1,4 +1,0 @@
-2025-03-21 09:19:20,435 - system_monitor - INFO - Redis连接已初始化
-{"asctime": "2025-03-21 09:25:10,438", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
-{"asctime": "2025-03-21 09:37:06,987", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
-{"asctime": "2025-03-21 10:27:33,520", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
