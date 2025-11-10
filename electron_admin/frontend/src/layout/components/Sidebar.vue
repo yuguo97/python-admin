@@ -119,10 +119,66 @@ const filterMenus = (menus, menuCodes) => {
   })
 }
 
-// 根据权限过滤后的菜单
+// 将后端下发的菜单（userStore.menus）合并到本地路由定义后再按权限过滤
 const routes = computed(() => {
   const menuCodes = userStore.menuCodes || []
-  return filterMenus(JSON.parse(JSON.stringify(allRoutes)), menuCodes)
+  const userMenus = userStore.menus || []
+
+  // 深拷贝一份基础路由定义，避免修改原始 allRoutes
+  const baseRoutes = JSON.parse(JSON.stringify(allRoutes))
+
+  // Helper: 找到父节点，先按 menuCode 匹配其 meta.menuCode，再按 path 的最后一段匹配
+  const findParent = (parentKey) => {
+    if (!parentKey) return null
+    let p = baseRoutes.find(r => r.meta?.menuCode === parentKey)
+    if (p) return p
+    // 尝试按 path 尾部匹配 (例如 parentKey === 'system' -> path '/system')
+    p = baseRoutes.find(r => r.path === `/${parentKey}` || r.path === parentKey)
+    return p || null
+  }
+
+  // 合并后端菜单到 baseRoutes
+  userMenus.forEach(m => {
+    try {
+      // 支持后端不同字段名: path / route / url
+      const rawPath = m.path || m.route || m.url || (m.meta && m.meta.path)
+      if (!rawPath) return
+
+      const itemPath = rawPath.startsWith('/') ? rawPath : `/${rawPath}`
+
+      // 构建 node.meta，优先使用后端 meta 中的信息
+      const metaFromBackend = m.meta || {}
+      const node = {
+        path: itemPath,
+        meta: {
+          title: metaFromBackend.title || m.title || m.name || '未命名',
+          icon: metaFromBackend.icon || m.icon,
+          menuCode: metaFromBackend.menuCode || m.menuCode || m.menu_code || metaFromBackend.menu_code
+        }
+      }
+
+      // 支持 parent 字段可能在多个位置（m.parent, m.meta.parent, m.parent_code）
+      const parentKey = m.parent || metaFromBackend.parent || m.parent_code || metaFromBackend.parent_code
+
+      const parent = findParent(parentKey)
+      if (parent) {
+        parent.children = parent.children || []
+        // 避免重复添加（按 path 或 menuCode 识别）
+        const exists = parent.children.find(ch => ch.path === node.path || ch.meta?.menuCode === node.meta.menuCode)
+        if (!exists) {
+          parent.children.push(node)
+        }
+      } else {
+        // 若未找到父节点, 将其作为顶级项加入（避免重复）
+        const existsTop = baseRoutes.find(r => r.path === node.path || r.meta?.menuCode === node.meta.menuCode)
+        if (!existsTop) baseRoutes.push(node)
+      }
+    } catch (e) {
+      console.error('合并后端菜单失败:', e, m)
+    }
+  })
+
+  return filterMenus(baseRoutes, menuCodes)
 })
 </script>
 
