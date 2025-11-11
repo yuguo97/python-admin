@@ -5,7 +5,7 @@ import { systemService } from '@/utils/request'
  */
 export function getSystemInfo() {
   return systemService({
-    url: '/system/info',
+    url: '/system',
     method: 'get'
   })
 }
@@ -31,6 +31,18 @@ export function getMemoryInfo() {
 }
 
 /**
+ * 获取进程信息（前 N 条）
+ * @param {number} limit
+ */
+export function getProcesses(limit = 200) {
+  return systemService({
+    url: '/system/processes',
+    method: 'get',
+    params: { limit }
+  })
+}
+
+/**
  * 获取磁盘信息
  */
 export function getDiskInfo() {
@@ -45,7 +57,7 @@ export function getDiskInfo() {
  */
 export function getServiceList() {
   return systemService({
-    url: '/services',
+    url: '/system/services',
     method: 'get'
   })
 }

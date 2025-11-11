@@ -1,0 +1,214 @@
+{"asctime": "2025-11-11 09:08:42,647", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:08:42,657", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:08:42,665", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:08:42,673", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:08:42,683", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:08:43,564", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:08:43,572", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:08:43,595", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:08:43,599", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:08:43,610", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:14:22,192", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:14:22,200", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:14:22,206", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:14:22,214", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:14:22,222", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:14:23,003", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:14:23,022", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:14:23,030", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:14:23,044", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:14:23,046", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:16:48,397", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 09:16:48,407", "name": "server", "levelname": "INFO", "message": "正在关闭服务: system", "taskName": null}
+{"asctime": "2025-11-11 09:16:48,439", "name": "server", "levelname": "INFO", "message": "正在关闭服务: ai", "taskName": null}
+{"asctime": "2025-11-11 09:16:48,460", "name": "server", "levelname": "INFO", "message": "正在关闭服务: gateway", "taskName": null}
+{"asctime": "2025-11-11 09:17:15,324", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:17:15,335", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:17:15,343", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:17:15,355", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:17:15,364", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:17:16,186", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:17:16,187", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:17:16,201", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:17:16,204", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:17:16,234", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:19:56,701", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 09:19:56,702", "name": "server", "levelname": "INFO", "message": "正在关闭服务: crawler", "taskName": null}
+{"asctime": "2025-11-11 09:21:57,502", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:21:57,516", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:21:57,525", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:21:57,534", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:21:57,562", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:21:59,738", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:21:59,751", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:21:59,792", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:21:59,827", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:21:59,945", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:24:01,545", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:24:01,552", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:24:01,558", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:24:01,564", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:24:01,570", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:24:02,529", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:24:02,543", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:24:02,551", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:24:02,590", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:24:02,597", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,203", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,213", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,221", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,229", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,237", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,976", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,985", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,986", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:35:25,993", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:35:26,045", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,169", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,176", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,182", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,189", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,196", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,887", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,887", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,898", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,906", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:43:13,911", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:44:58,430", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 09:45:08,417", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:45:08,424", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:45:08,430", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:45:08,437", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:45:08,445", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:45:09,192", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:45:09,218", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:45:09,281", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:45:09,285", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:45:09,287", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:48:33,403", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:48:33,413", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:48:33,421", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:48:33,429", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 09:48:33,441", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:48:34,725", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 09:48:34,741", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 09:48:34,790", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 09:48:34,845", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 09:48:34,850", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 10:49:31,522", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 10:49:31,544", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 10:49:31,549", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 10:49:31,554", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 10:49:31,562", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 10:49:32,142", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 10:49:32,144", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 10:49:32,144", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 10:49:32,156", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 10:49:32,166", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 10:55:48,345", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 10:55:48,346", "name": "server", "levelname": "INFO", "message": "正在关闭服务: crawler", "taskName": null}
+{"asctime": "2025-11-11 10:55:48,354", "name": "server", "levelname": "INFO", "message": "正在关闭服务: system", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,341", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,349", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,354", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,361", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,368", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,958", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,975", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,978", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,983", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 10:55:53,983", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:10:24,615", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:10:24,639", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:10:24,647", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:10:24,654", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:10:24,662", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:10:25,413", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:10:25,414", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:10:25,415", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:10:25,431", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:10:25,454", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:11:46,127", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 11:11:46,127", "name": "server", "levelname": "INFO", "message": "正在关闭服务: crawler", "taskName": null}
+{"asctime": "2025-11-11 11:11:46,136", "name": "server", "levelname": "INFO", "message": "正在关闭服务: system", "taskName": null}
+{"asctime": "2025-11-11 11:11:46,146", "name": "server", "levelname": "INFO", "message": "正在关闭服务: gateway", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,164", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,170", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,175", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,181", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,188", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,862", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,862", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+
+{"asctime": "2025-11-11 11:13:16,890", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:13:16,907", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:20:01,472", "name": "server", "levelname": "INFO", "message": "收到终止信号,正在关闭所有服务...", "taskName": null}
+{"asctime": "2025-11-11 11:20:01,473", "name": "server", "levelname": "INFO", "message": "正在关闭服务: crawler", "taskName": null}
+{"asctime": "2025-11-11 11:20:01,485", "name": "server", "levelname": "INFO", "message": "正在关闭服务: ai", "taskName": null}
+{"asctime": "2025-11-11 11:20:01,497", "name": "server", "levelname": "INFO", "message": "正在关闭服务: gateway", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,212", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,220", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,225", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,231", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,237", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,932", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,934", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,943", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,945", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:21:20,964", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,235", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,243", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,249", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,257", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,263", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,968", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,970", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,990", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:24:00,993", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:24:01,011", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:24:02,300", "name": "server", "levelname": "ERROR", "message": "服务启动失败: (unicode error) 'unicodeescape' codec can't decode bytes in position 47-48: truncated \\UXXXXXXXX escape (system_info.py, line 197)", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,050", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,058", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,062", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,070", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,076", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,822", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,836", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,843", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,847", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:26:02,883", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:26:04,378", "name": "server", "levelname": "ERROR", "message": "服务启动失败: (unicode error) 'unicodeescape' codec can't decode bytes in position 47-48: truncated \\UXXXXXXXX escape (system_info.py, line 197)", "taskName": null}
+{"asctime": "2025-11-11 11:28:08,268", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:28:08,279", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:28:08,287", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:28:08,295", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:28:08,308", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:28:09,081", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:28:09,083", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:28:09,086", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:28:09,103", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:28:09,131", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:28:10,585", "name": "server", "levelname": "ERROR", "message": "服务启动失败: (unicode error) 'unicodeescape' codec can't decode bytes in position 47-48: truncated \\UXXXXXXXX escape (system_info.py, line 197)", "taskName": null}
+{"asctime": "2025-11-11 11:31:02,153", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:31:03,131", "name": "server", "levelname": "ERROR", "message": "服务启动失败: (unicode error) 'unicodeescape' codec can't decode bytes in position 47-48: truncated \\UXXXXXXXX escape (system_info.py, line 197)", "taskName": null}
+{"asctime": "2025-11-11 11:31:47,983", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:33:10,635", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:33:10,642", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:33:10,647", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:33:10,652", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:33:10,660", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:33:11,325", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:33:11,327", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:33:11,328", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:33:11,335", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:33:11,359", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:35:39,893", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:35:39,900", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:35:39,905", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:35:39,911", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:35:39,919", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}
+{"asctime": "2025-11-11 11:35:40,545", "name": "server", "levelname": "INFO", "message": "启动服务: admin, 端口: 8000", "taskName": null}
+{"asctime": "2025-11-11 11:35:40,557", "name": "server", "levelname": "INFO", "message": "启动服务: system, 端口: 8002", "taskName": null}
+{"asctime": "2025-11-11 11:35:40,558", "name": "server", "levelname": "INFO", "message": "启动服务: ai, 端口: 8003", "taskName": null}
+{"asctime": "2025-11-11 11:35:40,574", "name": "server", "levelname": "INFO", "message": "启动服务: crawler, 端口: 8001", "taskName": null}
+{"asctime": "2025-11-11 11:35:40,576", "name": "server", "levelname": "INFO", "message": "启动服务: gateway, 端口: 8999", "taskName": null}

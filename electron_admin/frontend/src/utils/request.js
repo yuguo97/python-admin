@@ -152,7 +152,12 @@ function createClient(baseURL) {
           userStore.logout()
           router.push('/login')
         }
-        return Promise.reject(new Error(res.message || '请求失败'))
+        // 构造一个 Error 对象但携带后端返回的结构，方便上层按 code/status 处理
+        const err = new Error(res.message || '请求失败')
+        err.code = res.code
+        err.status = res.status
+        err.data = res.data
+        return Promise.reject(err)
       }
       return res
     },

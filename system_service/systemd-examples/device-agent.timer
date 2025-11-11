@@ -1,0 +1,12 @@
+[Unit]
+Description=Device Agent Timer
+Requires=device-agent.service
+
+[Timer]
+# 启动后5分钟首次执行
+OnBootSec=5min
+# 每次执行后30分钟再次执行
+OnUnitActiveSec=30min
+
+[Install]
+WantedBy=timers.target

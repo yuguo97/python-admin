@@ -139,6 +139,13 @@ cnpm install
 # 或使用 npm install
 ```
 
+如果你在 SystemInfo 页面使用了 ECharts（CPU/内存趋势图），请在 `electron_admin/frontend` 目录下安装 ECharts：
+
+```bash
+cd electron_admin/frontend
+npm install echarts --save
+```
+
 #### 安装Electron依赖
 ```bash
 cd electron_admin

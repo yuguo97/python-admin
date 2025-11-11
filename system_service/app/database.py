@@ -18,6 +18,7 @@ db = client[MONGODB_CONFIG["database"]]
 # 获取集合
 metrics = db.metrics
 alerts = db.alerts
+devices = db.devices  # 设备信息集合
 
 # Redis客户端配置
 redis_client = None
@@ -54,6 +55,9 @@ async def init_db():
         # 创建索引
         await metrics.create_index([("timestamp", -1)])
         await alerts.create_index([("timestamp", -1)])
+        await devices.create_index([("device_id", 1)], unique=True)
+        await devices.create_index([("last_seen", -1)])
+        await devices.create_index([("hostname", 1)])
         logger.info("MongoDB索引创建成功")
     except Exception as e:
         logger.error(f"MongoDB索引创建失败: {str(e)}")

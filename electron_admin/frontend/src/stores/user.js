@@ -42,7 +42,7 @@ export const useUserStore = defineStore('user', {
           this.menus = res.data.menus || []
           
           // 动态添加路由
-          if (this.menus.length > 0 && !this.routesAdded) {
+          if (this.menus.length > 0) {
             const { addDynamicRoutes } = await import('@/router/index')
             const success = addDynamicRoutes(this.menus)
             if (success) {

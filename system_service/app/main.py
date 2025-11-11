@@ -1,6 +1,6 @@
 """ 系统监控服务主应用 """
 
-from fastapi import FastAPI, Request, Depends
+from fastapi import FastAPI, Request, Depends, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import (
     get_redoc_html,
@@ -9,12 +9,16 @@ from fastapi.openapi.docs import (
 )
 from fastapi.staticfiles import StaticFiles
 from . import system_info
+from .device_service import DeviceService
+from .models import DeviceReportData, DeviceQuery
+from .database import init_db
 from utils.logger import setup_logger
 from utils.response import (
     success_response, error_response, server_error
 )
 from utils.auth import verify_token
 from utils.tracing import init_tracing, create_span, add_span_attribute, set_span_status, end_span
+from opentelemetry.trace import StatusCode
 
 # 设置日志记录器
 logger = setup_logger("system_service", "system")
@@ -84,6 +88,7 @@ async def startup_event():
     """服务启动时初始化"""
     logger.info("初始化系统监控服务...")
     monitor.init_redis()
+    await init_db()
     logger.info("系统监控服务初始化完成")
 
 @app.on_event("shutdown")
@@ -109,6 +114,13 @@ async def get_system_info(_: dict = Depends(verify_token)):
             add_span_attribute(span, "error", str(e))
             set_span_status(span, StatusCode.ERROR, str(e))
             return server_error("获取系统信息失败")
+
+
+        # 健康检查端点（供网关或外部监控使用）
+        @app.get("/health", include_in_schema=False)
+        async def health_check():
+            """简单的健康检查接口，返回服务可用状态"""
+            return success_response({"status": "ok"})
 
 @app.get("/system/cpu")
 async def get_cpu_info(_: dict = Depends(verify_token)):
@@ -213,4 +225,137 @@ async def get_service_status(_: dict = Depends(verify_token)):
             logger.error(f"获取服务状态失败: {str(e)}")
             add_span_attribute(span, "error", str(e))
             set_span_status(span, StatusCode.ERROR, str(e))
-            return server_error("获取服务状态失败") 
+            return server_error("获取服务状态失败")
+
+
+# ==================== 设备管理API ====================
+
+@app.post("/devices/report")
+async def report_device(report: DeviceReportData, _: dict = Depends(verify_token)):
+    """
+    接收设备上报数据
+    
+    Agent脚本调用此接口上报设备配置信息
+    """
+    with create_span("report_device") as span:
+        logger.info(f"接收设备上报: {report.device_id}")
+        try:
+            success = await DeviceService.save_device_report(report)
+            
+            if success:
+                add_span_attribute(span, "device.id", report.device_id)
+                add_span_attribute(span, "device.hostname", report.os.hostname)
+                set_span_status(span, StatusCode.OK)
+                return success_response({"message": "设备信息上报成功"})
+            else:
+                set_span_status(span, StatusCode.ERROR, "保存失败")
+                return server_error("设备信息保存失败")
+                
+        except Exception as e:
+            logger.error(f"处理设备上报失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"处理设备上报失败: {str(e)}")
+
+
+@app.post("/devices/query")
+async def query_devices(query: DeviceQuery = Body(...), _: dict = Depends(verify_token)):
+    """
+    查询设备列表
+    
+    支持按设备ID、主机名、操作系统、IP地址等条件查询
+    """
+    with create_span("query_devices") as span:
+        logger.info(f"查询设备列表: page={query.page}, page_size={query.page_size}")
+        try:
+            result = await DeviceService.query_devices(query)
+            
+            add_span_attribute(span, "devices.count", str(result["total"]))
+            set_span_status(span, StatusCode.OK)
+            return success_response(result)
+            
+        except Exception as e:
+            logger.error(f"查询设备列表失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"查询设备列表失败: {str(e)}")
+
+
+@app.get("/devices/{device_id}")
+async def get_device_detail(device_id: str, _: dict = Depends(verify_token)):
+    """
+    获取设备详情
+    
+    返回指定设备的完整配置信息
+    """
+    with create_span("get_device_detail") as span:
+        logger.info(f"获取设备详情: {device_id}")
+        try:
+            device = await DeviceService.get_device_detail(device_id)
+            
+            if device:
+                add_span_attribute(span, "device.found", "true")
+                set_span_status(span, StatusCode.OK)
+                return success_response(device)
+            else:
+                add_span_attribute(span, "device.found", "false")
+                set_span_status(span, StatusCode.OK)
+                return error_response("设备不存在", 404)
+                
+        except Exception as e:
+            logger.error(f"获取设备详情失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"获取设备详情失败: {str(e)}")
+
+
+@app.get("/devices/statistics/summary")
+async def get_device_statistics(_: dict = Depends(verify_token)):
+    """
+    获取设备统计信息
+    
+    包括总设备数、操作系统分布、CPU分布、内存分布、在线/离线设备数等
+    """
+    with create_span("get_device_statistics") as span:
+        logger.info("获取设备统计信息")
+        try:
+            stats = await DeviceService.get_statistics()
+            
+            add_span_attribute(span, "total.devices", str(stats.total_devices))
+            add_span_attribute(span, "online.devices", str(stats.online_devices))
+            set_span_status(span, StatusCode.OK)
+            return success_response(stats.dict())
+            
+        except Exception as e:
+            logger.error(f"获取设备统计失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"获取设备统计失败: {str(e)}")
+
+
+@app.delete("/devices/{device_id}")
+async def delete_device(device_id: str, _: dict = Depends(verify_token)):
+    """
+    删除设备记录
+    
+    从数据库中删除指定设备的记录
+    """
+    with create_span("delete_device") as span:
+        logger.info(f"删除设备: {device_id}")
+        try:
+            success = await DeviceService.delete_device(device_id)
+            
+            if success:
+                add_span_attribute(span, "device.deleted", "true")
+                set_span_status(span, StatusCode.OK)
+                return success_response({"message": "设备删除成功"})
+            else:
+                add_span_attribute(span, "device.deleted", "false")
+                set_span_status(span, StatusCode.OK)
+                return error_response("设备不存在", 404)
+                
+        except Exception as e:
+            logger.error(f"删除设备失败: {str(e)}")
+            add_span_attribute(span, "error", str(e))
+            set_span_status(span, StatusCode.ERROR, str(e))
+            return server_error(f"删除设备失败: {str(e)}") 

@@ -35,12 +35,20 @@ def run_service(service_name: str) -> None:
     
     try:
         import uvicorn
+        # 在多进程管理模式下 (尤其是 Windows spawn 模式)，
+        # uvicorn 的 `reload=True` 会启动额外的重载子进程，
+        # 这常常导致子进程的模块导入失败（ModuleNotFoundError）。
+        # 为避免该问题，默认关闭 reload。需要热重载时，可设置
+        # 环境变量 UVICORN_RELOAD=1 或 UVICORN_RELOAD=true 来开启。
+        reload_env = os.environ.get("UVICORN_RELOAD", "false").lower()
+        reload_flag = reload_env in ("1", "true", "yes")
+
         uvicorn.run(
             app_path,
             host="0.0.0.0",
             port=port,
             log_level="info",
-            reload=True
+            reload=reload_flag,
         )
     except Exception as e:
         logger.error(f"服务启动失败: {str(e)}")
@@ -52,12 +60,18 @@ def run_all() -> None:
     
     def signal_handler(signum, frame):
         """信号处理函数"""
-        logger.info("收到终止信号，正在关闭所有服务...")
+        logger.info("收到终止信号,正在关闭所有服务...")
         for name, process in processes.items():
             if process.is_alive():
                 logger.info(f"正在关闭服务: {name}")
                 process.terminate()
-                process.join()
+                # 给进程更多时间优雅关闭
+                process.join(timeout=5)
+                # 如果还没关闭,强制终止
+                if process.is_alive():
+                    logger.warning(f"服务 {name} 未响应,强制关闭")
+                    process.kill()
+                    process.join()
         sys.exit(0)
     
     # 注册信号处理器
@@ -70,7 +84,8 @@ def run_all() -> None:
             logger.info(f"启动服务: {name}, 端口: {port}")
             process = multiprocessing.Process(
                 target=run_service,
-                args=(name,)
+                args=(name,),
+                daemon=False  # 显式设置为非守护进程
             )
             process.start()
             processes[name] = process
@@ -79,6 +94,10 @@ def run_all() -> None:
         for process in processes.values():
             process.join()
             
+    except KeyboardInterrupt:
+        # 捕获 Ctrl+C
+        logger.info("收到键盘中断信号...")
+        signal_handler(signal.SIGINT, None)
     except Exception as e:
         logger.error(f"服务启动失败: {str(e)}")
         # 关闭所有已启动的服务
@@ -86,7 +105,10 @@ def run_all() -> None:
             if process.is_alive():
                 logger.info(f"正在关闭服务: {name}")
                 process.terminate()
-                process.join()
+                process.join(timeout=5)
+                if process.is_alive():
+                    process.kill()
+                    process.join()
         sys.exit(1)
 
 if __name__ == "__main__":

@@ -1,0 +1,13 @@
+[Unit]
+Description=Device Configuration Agent
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/device-agent --server http://your-server:8002 --token your-token
+User=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

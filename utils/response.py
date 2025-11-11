@@ -13,6 +13,7 @@ def create_response(
         status_code=status_code,
         content={
             "code": code,
+            "status": "ok" if code < 300 else "error",
             "message": message,
             "data": data
         }

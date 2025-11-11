@@ -1,5 +1,6 @@
 """后台管理服务主应用"""
 
+import os
 from fastapi import FastAPI, Request, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import (
@@ -15,6 +16,7 @@ from datetime import datetime, timedelta
 from typing import Optional, List
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+import psutil
 from admin_service.app import schemas
 from admin_service.app import models
 from admin_service.app.users.models import User
@@ -890,141 +892,248 @@ async def get_menus(db: Session = Depends(get_db), _: dict = Depends(verify_toke
 async def get_services(_: dict = Depends(verify_token)):
     """获取所有服务状态"""
     try:
-        import psutil
-        import os
-        from dotenv import load_dotenv
+        from .service_manager import service_manager
         
-        load_dotenv()
+        # 获取所有服务状态
+        services = service_manager.get_all_services_status()
         
-        services = [
-            {
-                "id": 1,
-                "name": "Admin Service",
-                "service_name": "admin",
-                "port": int(os.getenv("ADMIN_SERVICE_PORT", 8000)),
-                "description": "后台管理服务",
-                "status": "running"
-            },
-            {
-                "id": 2,
-                "name": "System Service",
-                "service_name": "system",
-                "port": int(os.getenv("SYSTEM_SERVICE_PORT", 8002)),
-                "description": "系统信息服务",
-                "status": "stopped"
-            },
-            {
-                "id": 3,
-                "name": "Crawler Service",
-                "service_name": "crawler",
-                "port": int(os.getenv("CRAWLER_SERVICE_PORT", 8001)),
-                "description": "爬虫服务",
-                "status": "stopped"
-            },
-            {
-                "id": 4,
-                "name": "AI Service",
-                "service_name": "ai",
-                "port": int(os.getenv("AI_SERVICE_PORT", 8003)),
-                "description": "AI服务",
-                "status": "stopped"
-            }
-        ]
-        
-        # 检查端口是否被占用来判断服务状态
-        for service in services:
-            port = service["port"]
-            for conn in psutil.net_connections():
-                if conn.laddr.port == port and conn.status == 'LISTEN':
-                    service["status"] = "running"
-                    break
+        # 添加 Admin Service (当前服务)
+        admin_service = {
+            "service_name": "admin",
+            "name": "Admin Service",
+            "port": int(os.getenv("ADMIN_SERVICE_PORT", 8000)),
+            "description": "后台管理服务",
+            "status": "running"
+        }
+        services.insert(0, admin_service)
         
         return success_response(services)
     except Exception as e:
         logger.error(f"获取服务列表失败: {str(e)}")
         return server_error("获取服务列表失败")
 
+
+@app.get("/services/{service_name}/diagnose")
+async def diagnose_service_endpoint(service_name: str, _: dict = Depends(verify_token)):
+    """诊断指定服务，返回占用端口的进程信息（pid、cmdline、ppid、user）"""
+    try:
+        from .service_manager import service_manager
+
+        if service_name == "admin":
+            return error_response("无法诊断当前管理服务", status_code=400)
+
+        if service_name not in service_manager.service_config:
+            return error_response("未知的服务", status_code=400)
+
+        config = service_manager.service_config[service_name]
+        port = config["port"]
+
+        process = service_manager._get_process_by_port(port)
+        if not process:
+            # 也尝试从保存的 PID 文件查找
+            pids = service_manager._load_pids()
+            pid = pids.get(service_name)
+            proc_info = None
+            if pid:
+                try:
+                    p = psutil.Process(pid)
+                    proc_info = {
+                        "pid": p.pid,
+                        "ppid": p.ppid(),
+                        "cmdline": p.cmdline(),
+                        "exe": p.exe() if p.exe() else None,
+                        "username": p.username()
+                    }
+                except Exception:
+                    proc_info = None
+
+            if not proc_info:
+                return success_response({
+                    "running": False,
+                    "message": f"端口 {port} 未发现占用进程或 PID 文件中无记录"
+                })
+
+            return success_response({"running": True, "process": proc_info})
+
+        # 已找到占用该端口的进程
+        try:
+            proc_info = {
+                "pid": process.pid,
+                "ppid": process.ppid(),
+                "cmdline": process.cmdline(),
+                "exe": process.exe() if hasattr(process, 'exe') else None,
+                "username": process.username()
+            }
+        except Exception:
+            proc_info = {"pid": process.pid}
+
+        return success_response({"running": True, "process": proc_info})
+    except Exception as e:
+        logger.error(f"诊断服务失败: {str(e)}")
+        return server_error("诊断服务失败")
+
 @app.post("/services/{service_name}/start")
-async def start_service_endpoint(service_name: str, _: dict = Depends(verify_token)):
+async def start_service_endpoint(service_name: str, token_data: dict = Depends(verify_token)):
     """启动服务"""
     try:
-        import subprocess
-        import sys
+        from .service_manager import service_manager
         
-        # 验证服务名称
-        valid_services = ["admin", "system", "crawler", "ai", "gateway"]
-        if service_name not in valid_services:
-            return error_response(f"无效的服务名称: {service_name}", status_code=400)
+        # 不允许启动 admin 服务(当前服务)
+        if service_name == "admin":
+            return error_response("管理服务已在运行中", status_code=400)
         
-        # 使用 manage.py 启动服务
-        manage_py = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "manage.py")
-        
-        # 在后台启动服务
-        if sys.platform == "win32":
-            subprocess.Popen(
-                [sys.executable, manage_py, "start", service_name],
-                creationflags=subprocess.CREATE_NEW_CONSOLE
-            )
-        else:
-            subprocess.Popen(
-                [sys.executable, manage_py, "start", service_name],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL
-            )
-        
-        logger.info(f"服务启动命令已发送: {service_name}")
-        return success_response({"message": f"服务 {service_name} 启动命令已发送"})
-    except Exception as e:
+        # 启动服务（service_manager 会尝试短时间内检测端口占用）
+        operator = token_data.get("sub") if token_data else None
+        result = service_manager.start_service(service_name)
+
+        # 如果 start_service 已经确认为 running，直接返回成功
+        if result.get("status") == "running":
+            logger.info(f"服务启动成功: {service_name} (PID: {result.get('pid')}, Port: {result.get('port')})")
+            return success_response({
+                "message": f"服务 {service_name} 启动成功",
+                "pid": result.get("pid"),
+                "port": result.get("port")
+            })
+
+        # 否则再做一次最终状态检查并返回当前状态提示（保持幂等且友好提示）
+        status = service_manager.get_service_status(service_name)
+        if status.get("status") == "running":
+            logger.info(f"服务启动成功(后验检测): {service_name} (Port: {status.get('port')})")
+            return success_response({
+                "message": f"服务 {service_name} 启动成功",
+                "port": status.get("port")
+            })
+
+        logger.warning(f"服务启动命令已发送,但未能确认启动状态: {service_name}")
+        return success_response({
+            "message": f"服务 {service_name} 启动命令已发送,请稍后刷新查看状态",
+            "pid": result.get("pid"),
+            "port": result.get("port"),
+            "status": result.get("status")
+        })
+    except ValueError as e:
+        logger.error(f"无效的服务名称: {service_name}")
+        return error_response(str(e), status_code=400)
+    except RuntimeError as e:
+        # 如果是 "已在运行" 的情况, 将启动视为幂等操作并返回运行状态
+        err_msg = str(e)
+        if "已在运行" in err_msg or "已在运行中" in err_msg or "already" in err_msg:
+            logger.info(f"启动服务请求: 服务 {service_name} 已在运行, 返回幂等成功")
+            return success_response({
+                "message": f"服务 {service_name} 已在运行",
+                "status": "running"
+            })
+        # 其他启动失败按 400 返回
         logger.error(f"启动服务失败: {str(e)}")
+        return error_response(str(e), status_code=400, data={"error_code": "START_FAILED"})
+    except Exception as e:
+        logger.error(f"启动服务失败: {str(e)}", exc_info=True)
         return server_error(f"启动服务失败: {str(e)}")
 
 @app.post("/services/{service_name}/stop")
-async def stop_service_endpoint(service_name: str, _: dict = Depends(verify_token)):
+async def stop_service_endpoint(service_name: str, force: bool = False, token_data: dict = Depends(verify_token)):
     """停止服务"""
     try:
-        import psutil
-        import os
-        from dotenv import load_dotenv
-        
-        load_dotenv()
-        
-        # 验证服务名称
-        valid_services = ["admin", "system", "crawler", "ai", "gateway"]
-        if service_name not in valid_services:
-            return error_response(f"无效的服务名称: {service_name}", status_code=400)
+        from .service_manager import service_manager
         
         # 不允许停止当前服务(admin)
         if service_name == "admin":
             return error_response("不能停止当前管理服务", status_code=400)
         
-        # 获取服务端口
-        port_map = {
-            "system": int(os.getenv("SYSTEM_SERVICE_PORT", 8002)),
-            "crawler": int(os.getenv("CRAWLER_SERVICE_PORT", 8001)),
-            "ai": int(os.getenv("AI_SERVICE_PORT", 8003)),
-            "gateway": int(os.getenv("GATEWAY_SERVICE_PORT", 8999))
-        }
-        
-        port = port_map.get(service_name)
-        if not port:
-            return error_response(f"未找到服务端口: {service_name}", status_code=400)
-        
-        # 查找并终止占用该端口的进程
-        killed = False
-        for conn in psutil.net_connections():
-            if conn.laddr.port == port and conn.status == 'LISTEN':
-                try:
-                    process = psutil.Process(conn.pid)
-                    process.terminate()
-                    killed = True
-                    logger.info(f"已终止服务进程: {service_name} (PID: {conn.pid})")
-                except (psutil.NoSuchProcess, psutil.AccessDenied) as e:
-                    logger.error(f"终止进程失败: {str(e)}")
-        
-        if killed:
-            return success_response({"message": f"服务 {service_name} 已停止"})
-        else:
-            return error_response(f"服务 {service_name} 未运行", status_code=400)
-    except Exception as e:
+        operator = token_data.get("sub") if token_data else None
+        # 停止服务（stop_service 会尝试终止进程并验证端口释放）
+        result = service_manager.stop_service(service_name, force=force, operator=operator)
+
+        # 如果成功返回细化信息
+        if result.get("status") == "stopped":
+            logger.info(f"服务已停止: {service_name} (PID: {result.get('pid')})")
+            return success_response({
+                "message": f"服务 {service_name} 已停止",
+                "pid": result.get("pid"),
+                "port_free": result.get("port_free", True)
+            })
+
+        # 否则进行后验检查
+        status = service_manager.get_service_status(service_name)
+        if status.get("status") == "stopped":
+            return success_response({
+                "message": f"服务 {service_name} 已停止",
+                "port": status.get("port")
+            })
+
+        # 未能确认停止，返回错误
+        logger.error(f"停止服务未能确认: {service_name}")
+        return error_response(f"停止服务未能确认: {service_name}", status_code=500)
+    except ValueError as e:
+        logger.error(f"无效的服务名称: {service_name}")
+        return error_response(str(e), status_code=400)
+    except RuntimeError as e:
+        # 如果服务本就未运行,将其视为幂等的停止操作: 记录为 INFO 并返回成功
+        err_msg = str(e)
+        if "未运行" in err_msg or "not running" in err_msg:
+            logger.info(f"停止服务请求: 服务 {service_name} 未运行, 返回幂等停止结果")
+            return success_response({
+                "message": f"服务 {service_name} 未运行",
+                "status": "stopped"
+            })
+
+        # 识别自动重启场景并返回 503
+        if "AUTO_RESTART" in err_msg or "自动重启" in err_msg:
+            logger.error(f"停止服务失败(自动重启): {str(e)}")
+            return error_response(str(e), status_code=503, data={"error_code": "AUTO_RESTART"})
+
+        # 识别端口仍被占用的情况并返回 503
+        if "PORT_OCCUPIED" in err_msg or "端口" in err_msg:
+            logger.error(f"停止服务失败(端口占用): {str(e)}")
+            return error_response(str(e), status_code=503, data={"error_code": "PORT_OCCUPIED"})
+
         logger.error(f"停止服务失败: {str(e)}")
+        return error_response(str(e), status_code=400)
+    except Exception as e:
+        logger.error(f"停止服务失败: {str(e)}", exc_info=True)
         return server_error(f"停止服务失败: {str(e)}")
+
+@app.post("/services/{service_name}/restart")
+async def restart_service_endpoint(service_name: str, force: bool = False, token_data: dict = Depends(verify_token)):
+    """重启服务"""
+    try:
+        from .service_manager import service_manager
+        
+        # 不允许重启当前服务(admin)
+        if service_name == "admin":
+            return error_response("不能重启当前管理服务", status_code=400)
+        
+        operator = token_data.get("sub") if token_data else None
+        # 重启服务，支持 force
+        result = service_manager.restart_service(service_name, force=force, operator=operator)
+        
+        # 等待一小段时间让服务完全启动
+        import asyncio
+        await asyncio.sleep(2)
+        
+        # 验证服务状态
+        status = service_manager.get_service_status(service_name)
+        
+        if status["status"] == "running":
+            logger.info(f"服务重启成功: {service_name} (PID: {result['pid']}, Port: {result['port']})")
+            return success_response({
+                "message": f"服务 {service_name} 重启成功",
+                "pid": result["pid"],
+                "port": result["port"]
+            })
+        else:
+            logger.warning(f"服务重启命令已发送,但未能确认启动状态: {service_name}")
+            return success_response({
+                "message": f"服务 {service_name} 重启命令已发送,请稍后刷新查看状态",
+                "pid": result.get("pid"),
+                "port": result.get("port")
+            })
+    except ValueError as e:
+        logger.error(f"无效的服务名称: {service_name}")
+        return error_response(str(e), status_code=400)
+    except RuntimeError as e:
+        logger.error(f"重启服务失败: {str(e)}")
+        return error_response(str(e), status_code=400)
+    except Exception as e:
+        logger.error(f"重启服务失败: {str(e)}", exc_info=True)
+        return server_error(f"重启服务失败: {str(e)}")

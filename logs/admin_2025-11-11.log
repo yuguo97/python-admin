@@ -1,0 +1,185 @@
+{"asctime": "2025-11-11 09:08:53,241", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:08:53,310", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:10:26,880", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-6"}
+{"asctime": "2025-11-11 09:10:26,889", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-6"}
+{"asctime": "2025-11-11 09:12:58,007", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-36"}
+{"asctime": "2025-11-11 09:12:58,023", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-36"}
+{"asctime": "2025-11-11 09:14:28,784", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:14:28,864", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:15:15,413", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-4"}
+{"asctime": "2025-11-11 09:15:15,461", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-4"}
+{"asctime": "2025-11-11 09:15:26,730", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-16"}
+{"asctime": "2025-11-11 09:15:26,746", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-16"}
+{"asctime": "2025-11-11 09:15:33,270", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-25"}
+{"asctime": "2025-11-11 09:15:33,273", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-25"}
+{"asctime": "2025-11-11 09:15:33,880", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-32"}
+{"asctime": "2025-11-11 09:15:33,885", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-32"}
+{"asctime": "2025-11-11 09:16:47,259", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:16:47,297", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:17:21,883", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:17:21,944", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:19:56,291", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:19:56,292", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:22:05,266", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:22:05,304", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:22:09,772", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-6"}
+{"asctime": "2025-11-11 09:22:09,784", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-6"}
+{"asctime": "2025-11-11 09:22:32,533", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-16"}
+{"asctime": "2025-11-11 09:22:32,547", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-16"}
+{"asctime": "2025-11-11 09:22:56,638", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-26"}
+{"asctime": "2025-11-11 09:22:56,642", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-26"}
+{"asctime": "2025-11-11 09:23:38,853", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-29"}
+{"asctime": "2025-11-11 09:23:38,857", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-29"}
+{"asctime": "2025-11-11 09:24:07,015", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:24:07,069", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:35:30,244", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:35:30,288", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:35:42,927", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-5"}
+{"asctime": "2025-11-11 09:35:42,946", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-5"}
+{"asctime": "2025-11-11 09:43:19,096", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:43:19,179", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:43:30,921", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-4"}
+{"asctime": "2025-11-11 09:43:52,581", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-8"}
+{"asctime": "2025-11-11 09:44:02,915", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-10"}
+{"asctime": "2025-11-11 09:44:12,724", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-12"}
+{"asctime": "2025-11-11 09:44:22,922", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-14"}
+{"asctime": "2025-11-11 09:44:32,603", "name": "admin_service", "levelname": "ERROR", "message": "获取服务列表失败: name 'os' is not defined", "taskName": "Task-16"}
+{"asctime": "2025-11-11 09:44:40,433", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:44:40,439", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:44:47,355", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:44:47,392", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:45:14,597", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:45:14,658", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:45:35,407", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-13"}
+{"asctime": "2025-11-11 09:45:35,413", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-13"}
+{"asctime": "2025-11-11 09:45:43,151", "name": "admin_service", "levelname": "INFO", "message": "服务已停止: ai (PID: 8080)", "taskName": "Task-18"}
+{"asctime": "2025-11-11 09:45:49,299", "name": "admin_service", "levelname": "ERROR", "message": "停止服务失败: 服务 ai 未运行", "taskName": "Task-24"}
+{"asctime": "2025-11-11 09:48:42,902", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:48:42,975", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:49:35,758", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:49:35,807", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:49:43,274", "name": "admin_service", "levelname": "INFO", "message": "用户登录: admin", "taskName": "Task-4"}
+{"asctime": "2025-11-11 10:49:43,612", "name": "admin_service", "levelname": "INFO", "message": "用户登录成功: admin", "taskName": "Task-4"}
+{"asctime": "2025-11-11 10:49:47,325", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-8"}
+{"asctime": "2025-11-11 10:49:47,332", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-8"}
+{"asctime": "2025-11-11 10:50:35,516", "name": "admin_service", "levelname": "INFO", "message": "服务已停止: ai (PID: 15872)", "taskName": "Task-20"}
+{"asctime": "2025-11-11 10:50:41,099", "name": "admin_service", "levelname": "ERROR", "message": "停止服务失败: 服务 ai 未运行", "taskName": "Task-25"}
+{"asctime": "2025-11-11 10:55:10,264", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:10,265", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:13,948", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:14,006", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:48,068", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:48,069", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:57,726", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:57,761", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:56:03,756", "name": "admin_service", "levelname": "INFO", "message": "服务已停止: ai (PID: 8660)", "taskName": "Task-8"}
+{"asctime": "2025-11-11 10:57:06,456", "name": "admin_service", "levelname": "INFO", "message": "停止服务请求: 服务 ai 未运行, 返回幂等停止结果", "taskName": "Task-24"}
+{"asctime": "2025-11-11 10:57:12,501", "name": "admin_service", "levelname": "ERROR", "message": "重启服务失败: 服务 ai 已在运行中 (端口 8003 已被占用)", "taskName": "Task-30"}
+{"asctime": "2025-11-11 10:57:23,757", "name": "admin_service", "levelname": "INFO", "message": "停止服务请求: 服务 ai 未运行, 返回幂等停止结果", "taskName": "Task-34"}
+{"asctime": "2025-11-11 11:00:34,738", "name": "admin_service", "levelname": "INFO", "message": "停止服务请求: 服务 ai 未运行, 返回幂等停止结果", "taskName": "Task-78"}
+{"asctime": "2025-11-11 11:00:42,777", "name": "admin_service", "levelname": "INFO", "message": "停止服务请求: 服务 ai 未运行, 返回幂等停止结果", "taskName": "Task-84"}
+{"asctime": "2025-11-11 11:02:58,651", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:02:58,652", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:02,973", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:03,008", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:28,791", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:28,792", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:31,302", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:03:31,334", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:12,495", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:12,495", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:15,316", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:15,348", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:28,308", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:28,309", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:30,712", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:30,741", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:50,381", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:50,382", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:52,771", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:05:52,802", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:09,067", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:09,068", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:11,346", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:11,380", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:35,739", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:35,739", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:39,847", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:39,889", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:46,825", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:06:46,826", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:10:29,636", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:10:29,678", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:10:49,523", "name": "admin_service", "levelname": "ERROR", "message": "停止服务失败: 服务 ai 停止失败: 端口 8003 被外部机制占用 (可能自动重启)", "taskName": "Task-12"}
+{"asctime": "2025-11-11 11:11:26,545", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:26,546", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:29,891", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:29,931", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:45,798", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:45,799", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:13:20,887", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:13:20,920", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:19:59,738", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:19:59,739", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:21:25,248", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:21:25,285", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:24:03,479", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:24:03,479", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:24:03,511", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:24:03,511", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:24:15,038", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-8"}
+{"asctime": "2025-11-11 11:24:15,038", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-8"}
+{"asctime": "2025-11-11 11:24:15,057", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-8"}
+{"asctime": "2025-11-11 11:24:15,057", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-8"}
+{"asctime": "2025-11-11 11:26:05,479", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:26:05,479", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:26:05,515", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:26:05,515", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:26:22,351", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:26:22,351", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:26:22,381", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:26:22,381", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:28:11,788", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:28:11,788", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:28:11,823", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:28:11,823", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,706", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,706", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,764", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,764", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,768", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,768", "name": "admin_service", "levelname": "INFO", "message": "关闭后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,770", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:33:14,770", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:43,303", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:43,303", "name": "admin_service", "levelname": "INFO", "message": "初始化后台管理服务...", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:43,339", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:43,339", "name": "admin_service", "levelname": "INFO", "message": "后台管理服务初始化完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:53,059", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:35:53,059", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:35:53,081", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:35:53,081", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-7"}
+{"asctime": "2025-11-11 11:42:51,151", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-19"}
+{"asctime": "2025-11-11 11:42:51,151", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-19"}
+{"asctime": "2025-11-11 11:42:51,153", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-19"}
+{"asctime": "2025-11-11 11:42:51,153", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-19"}
+{"asctime": "2025-11-11 11:43:00,026", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-25"}
+{"asctime": "2025-11-11 11:43:00,026", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-25"}
+{"asctime": "2025-11-11 11:43:00,031", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-25"}
+{"asctime": "2025-11-11 11:43:00,031", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-25"}
+{"asctime": "2025-11-11 11:48:44,567", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-30"}
+{"asctime": "2025-11-11 11:48:44,567", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-30"}
+{"asctime": "2025-11-11 11:48:44,573", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-30"}
+{"asctime": "2025-11-11 11:48:44,573", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-30"}
+{"asctime": "2025-11-11 11:48:47,116", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-40"}
+{"asctime": "2025-11-11 11:48:47,116", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-40"}
+{"asctime": "2025-11-11 11:48:47,120", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-40"}
+{"asctime": "2025-11-11 11:48:47,120", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-40"}
+{"asctime": "2025-11-11 11:55:06,034", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-44"}
+{"asctime": "2025-11-11 11:55:06,034", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-44"}
+{"asctime": "2025-11-11 11:55:06,038", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-44"}
+{"asctime": "2025-11-11 11:55:06,038", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-44"}
+{"asctime": "2025-11-11 11:56:13,805", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-64"}
+{"asctime": "2025-11-11 11:56:13,805", "name": "admin_service", "levelname": "INFO", "message": "获取用户列表: skip=0, limit=10", "taskName": "Task-64"}
+{"asctime": "2025-11-11 11:56:13,809", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-64"}
+{"asctime": "2025-11-11 11:56:13,809", "name": "admin_service", "levelname": "INFO", "message": "获取到 2 个用户", "taskName": "Task-64"}

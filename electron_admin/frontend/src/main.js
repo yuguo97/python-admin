@@ -9,8 +9,8 @@ import App from './App.vue'
 import router from './router/index'
 import './assets/global.less'
 
-// 清除旧的 token,确保每次启动都是全新状态
-localStorage.removeItem('token')
+// 注意：移除自动清除 token 的行为，避免刷新或重载后用户被强制登出
+// 如果需要在开发时清除 token，请手动调用 localStorage.removeItem('token')
 
 const app = createApp(App)
 const pinia = createPinia()

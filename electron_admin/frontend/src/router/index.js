@@ -58,6 +58,7 @@ export function addDynamicRoutes(menus) {
           component: component,
           meta: menu.meta
         }
+        console.log("route1111111111111",route)
         router.addRoute('Layout', route)
       }
     })

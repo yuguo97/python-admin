@@ -1,0 +1,34 @@
+{"asctime": "2025-11-11 09:08:53,519", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:14:28,336", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:16:47,223", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:17:21,637", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:19:56,276", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:22:04,769", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:24:06,785", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:35:29,978", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:43:18,654", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:44:40,503", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:44:46,685", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:45:14,265", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 09:48:42,950", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:49:35,527", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:10,250", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:13,949", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:48,036", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 10:55:57,459", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:02:58,637", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:10:29,546", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:26,502", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:30,125", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:11:45,706", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:13:20,592", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:19:59,771", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:31:52,024", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:31:56,470", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-6"}
+{"asctime": "2025-11-11 11:32:00,252", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-8"}
+{"asctime": "2025-11-11 11:32:05,211", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-10"}
+{"asctime": "2025-11-11 11:32:10,319", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-12"}
+{"asctime": "2025-11-11 11:32:15,184", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-14"}
+{"asctime": "2025-11-11 11:32:41,604", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-16"}
+{"asctime": "2025-11-11 11:33:14,373", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 11:35:42,978", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
