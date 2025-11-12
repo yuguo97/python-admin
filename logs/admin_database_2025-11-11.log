@@ -143,3 +143,8 @@
 {"asctime": "2025-11-11 11:35:43,331", "name": "admin_database", "levelname": "INFO", "message": "表 permissions 已存在且字段完整", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,337", "name": "admin_database", "levelname": "INFO", "message": "表 menus 已存在且字段完整", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,338", "name": "admin_database", "levelname": "INFO", "message": "数据库表检查完成", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,677", "name": "admin_database", "levelname": "INFO", "message": "表 users 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,681", "name": "admin_database", "levelname": "INFO", "message": "表 roles 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,687", "name": "admin_database", "levelname": "INFO", "message": "表 permissions 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,695", "name": "admin_database", "levelname": "INFO", "message": "表 menus 已存在且字段完整", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,696", "name": "admin_database", "levelname": "INFO", "message": "数据库表检查完成", "taskName": "Task-2"}

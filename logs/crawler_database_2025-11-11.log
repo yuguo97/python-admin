@@ -74,3 +74,7 @@
 {"asctime": "2025-11-11 11:35:43,270", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,275", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,285", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,611", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB异步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,616", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB同步连接已创建", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,625", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,630", "name": "crawler_database", "levelname": "INFO", "message": "MongoDB连接已关闭", "taskName": "Task-2"}

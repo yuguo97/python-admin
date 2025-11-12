@@ -52,3 +52,6 @@
 {"asctime": "2025-11-11 11:33:15,108", "name": "crawler", "levelname": "INFO", "message": "数据库连接已关闭", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,238", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
 {"asctime": "2025-11-11 11:35:43,286", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,575", "name": "crawler", "levelname": "INFO", "message": "追踪系统初始化成功", "taskName": "Task-1"}
+{"asctime": "2025-11-11 14:19:39,626", "name": "crawler", "levelname": "INFO", "message": "数据库索引初始化成功", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,631", "name": "crawler", "levelname": "INFO", "message": "数据库连接已关闭", "taskName": "Task-2"}

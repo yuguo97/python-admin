@@ -88,3 +88,7 @@
 {"asctime": "2025-11-11 11:35:42,955", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
 {"asctime": "2025-11-11 11:35:43,185", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
 {"asctime": "2025-11-11 11:35:43,214", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
+{"asctime": "2025-11-11 14:19:38,885", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
+{"asctime": "2025-11-11 14:19:39,274", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
+{"asctime": "2025-11-11 14:19:39,511", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}
+{"asctime": "2025-11-11 14:19:39,560", "name": "tracing", "levelname": "INFO", "message": "链路追踪未启用", "taskName": "Task-1"}

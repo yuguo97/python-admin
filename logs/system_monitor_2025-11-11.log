@@ -32,3 +32,5 @@
 {"asctime": "2025-11-11 11:32:41,604", "name": "system_monitor", "levelname": "WARNING", "message": "获取网卡信息失败: module 'psutil' has no attribute 'AF_INET'", "taskName": "Task-16"}
 {"asctime": "2025-11-11 11:33:14,373", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:42,978", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,294", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已初始化", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,327", "name": "system_monitor", "levelname": "INFO", "message": "Redis连接已关闭", "taskName": "Task-2"}

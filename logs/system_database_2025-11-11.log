@@ -31,3 +31,5 @@
 {"asctime": "2025-11-11 11:33:14,394", "name": "system_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:42,976", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
 {"asctime": "2025-11-11 11:35:43,002", "name": "system_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,293", "name": "system_database", "levelname": "INFO", "message": "Redis连接已建立", "taskName": "Task-2"}
+{"asctime": "2025-11-11 14:19:39,315", "name": "system_database", "levelname": "INFO", "message": "MongoDB索引创建成功", "taskName": "Task-2"}
